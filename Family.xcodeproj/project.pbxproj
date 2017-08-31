@@ -15,6 +15,8 @@
 		99F74A101F4FCE1000159AB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99F74A0E1F4FCE1000159AB6 /* LaunchScreen.storyboard */; };
 		99FAFEDA1F57E2A00050C08A /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FAFED91F57E2A00050C08A /* MainTableViewCell.m */; };
 		99FAFEDE1F57E64E0050C08A /* FYNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FAFEDD1F57E64E0050C08A /* FYNetworking.m */; };
+		99FAFEE21F57E96C0050C08A /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FAFEE11F57E96C0050C08A /* MainModel.m */; };
+		99FAFEE51F57EBFA0050C08A /* MainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FAFEE41F57EBFA0050C08A /* MainCollectionViewCell.m */; };
 		BED14522A058B3A0E8366E4F /* libPods-Family.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 110B578A05AEA6E1CF622328 /* libPods-Family.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,10 @@
 		99FAFED91F57E2A00050C08A /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 		99FAFEDC1F57E64E0050C08A /* FYNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYNetworking.h; sourceTree = "<group>"; };
 		99FAFEDD1F57E64E0050C08A /* FYNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYNetworking.m; sourceTree = "<group>"; };
+		99FAFEE01F57E96C0050C08A /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
+		99FAFEE11F57E96C0050C08A /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
+		99FAFEE31F57EBFA0050C08A /* MainCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewCell.h; sourceTree = "<group>"; };
+		99FAFEE41F57EBFA0050C08A /* MainCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 		99FAFED51F57DE9D0050C08A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				99FAFEDF1F57E94E0050C08A /* Model */,
 				99FAFED71F57E0FC0050C08A /* ViewController */,
 				99FAFED61F57E0F50050C08A /* View */,
 			);
@@ -115,6 +122,8 @@
 			children = (
 				99FAFED81F57E2A00050C08A /* MainTableViewCell.h */,
 				99FAFED91F57E2A00050C08A /* MainTableViewCell.m */,
+				99FAFEE31F57EBFA0050C08A /* MainCollectionViewCell.h */,
+				99FAFEE41F57EBFA0050C08A /* MainCollectionViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -135,6 +144,15 @@
 				99FAFEDD1F57E64E0050C08A /* FYNetworking.m */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		99FAFEDF1F57E94E0050C08A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99FAFEE01F57E96C0050C08A /* MainModel.h */,
+				99FAFEE11F57E96C0050C08A /* MainModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		A10FC9AC9EA52553A010743A /* Frameworks */ = {
@@ -270,7 +288,9 @@
 			files = (
 				99F74A081F4FCE1000159AB6 /* MainViewController.m in Sources */,
 				99F74A051F4FCE1000159AB6 /* AppDelegate.m in Sources */,
+				99FAFEE21F57E96C0050C08A /* MainModel.m in Sources */,
 				99FAFEDA1F57E2A00050C08A /* MainTableViewCell.m in Sources */,
+				99FAFEE51F57EBFA0050C08A /* MainCollectionViewCell.m in Sources */,
 				99F74A021F4FCE1000159AB6 /* main.m in Sources */,
 				99FAFEDE1F57E64E0050C08A /* FYNetworking.m in Sources */,
 			);
