@@ -1,4 +1,5 @@
 platform :ios, '8.0'
 target 'Family' do
-pod 'AFNetworking' 
+pod 'AFNetworking'
+pod 'Masonry'
 end
