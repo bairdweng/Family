@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class MainItem;
 @interface MainCollectionViewCell : UICollectionViewCell
-
+@property(nonatomic,strong)NSString *imageURL;
 @end

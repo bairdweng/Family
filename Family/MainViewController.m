@@ -9,12 +9,17 @@
 #import "MainTableViewCell.h"
 #import "MainCollectionViewCell.h"
 #import "masonry.h"
-@interface MainViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+#import "MainCollectionViewFlowLayout.h"
+#import "MainModel.h"
+@interface MainViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,MainCollectionViewFlowLayoutDelegate>{
+    NSArray* _dataSource;
+}
 @end
 @implementation MainViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UICollectionViewFlowLayout* layout = [[UICollectionViewFlowLayout alloc] init];
+    MainCollectionViewFlowLayout* layout = [[MainCollectionViewFlowLayout alloc] init];
+    layout.layoutDelegate = self;
     UICollectionView* collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     collection.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:collection];
@@ -24,25 +29,27 @@
     [collection mas_makeConstraints:^(MASConstraintMaker* make) {
         make.edges.equalTo(self.view);
     }];
+    _dataSource = [MainModel initItems];
     // Do any additional setup after loading the view, typically from a nib.
 }
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 1;
+    return _dataSource.count;
 }
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+- (NSInteger)collectionView:(UICollectionView*)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 100;
+    MainItem *item = _dataSource[section];
+    return item.images.count;
 }
 - (UICollectionViewCell*)collectionView:(UICollectionView*)collectionView cellForItemAtIndexPath:(NSIndexPath*)indexPath
 {
+    MainItem *item = _dataSource[indexPath.section];
     MainCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"conllectId" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor purpleColor];
+    cell.imageURL = item.images[indexPath.row];
     return cell;
 }
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    return CGSizeMake(100, 100);
+- (CGSize)collectionView:(UICollectionView*)collectionView collectionViewLayout:(MainCollectionViewFlowLayout*)collectionViewLayout sizeOfItemAtIndexPath:(NSIndexPath*)indexPath{
+    return CGSizeMake(0, 150);
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

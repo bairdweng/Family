@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "MainItem.h"
 @interface MainModel : NSObject
-
++ (NSArray<MainItem*>*)initItems;
 @end
