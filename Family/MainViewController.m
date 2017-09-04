@@ -6,50 +6,51 @@
 //  Copyright © 2017年 Baird-weng. All rights reserved.
 //
 #import "MainViewController.h"
+#import "FYHeader.h"
+#import "CardCell.h"
 #import "MainTableViewCell.h"
-#import "MainCollectionViewCell.h"
-#import "masonry.h"
-#import "MainCollectionViewFlowLayout.h"
-#import "MainModel.h"
-@interface MainViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,MainCollectionViewFlowLayoutDelegate>{
-    NSArray* _dataSource;
+#import "FixButton.h"
+#import "WorkingViewController.h"
+@interface MainViewController () <UITableViewDelegate, UITableViewDataSource> {
 }
 @end
 @implementation MainViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    MainCollectionViewFlowLayout* layout = [[MainCollectionViewFlowLayout alloc] init];
-    layout.layoutDelegate = self;
-    UICollectionView* collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
-    collection.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:collection];
-    collection.delegate = self;
-    collection.dataSource = self;
-    [collection registerClass:[MainCollectionViewCell class] forCellWithReuseIdentifier:@"conllectId"];
-    [collection mas_makeConstraints:^(MASConstraintMaker* make) {
+    self.title = @"我的事务";
+    UITableView *tableView = [[UITableView alloc]init];
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    [self.view addSubview:tableView];
+    [tableView mas_makeConstraints:^(MASConstraintMaker* make) {
         make.edges.equalTo(self.view);
     }];
-    _dataSource = [MainModel initItems];
+    [tableView registerClass:[CardCell class] forCellReuseIdentifier:@"cardcell"];
+    __weak typeof(self) weakself = self;
+    FixButton *button = [[FixButton alloc]initWithImageName:@"add" withPosition:FixButtonPositionBottomRight withEvents:^(UIButton *button) {
+        WorkingViewController *viewController = [[WorkingViewController alloc]init];
+        viewController.title = @"添加事务";
+        UINavigationController *naivigation = [[UINavigationController alloc]initWithRootViewController:viewController];
+        [weakself presentViewController:naivigation animated:YES completion:nil];
+    }];
+    [self.view addSubview:button];
+    [button updateTheLayout];
     // Do any additional setup after loading the view, typically from a nib.
 }
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-    return _dataSource.count;
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
 }
-- (NSInteger)collectionView:(UICollectionView*)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    MainItem *item = _dataSource[section];
-    return item.images.count;
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
 }
-- (UICollectionViewCell*)collectionView:(UICollectionView*)collectionView cellForItemAtIndexPath:(NSIndexPath*)indexPath
-{
-    MainItem *item = _dataSource[indexPath.section];
-    MainCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"conllectId" forIndexPath:indexPath];
-    cell.imageURL = item.images[indexPath.row];
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    CardCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cardcell" forIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.textLabel.text = @"1212";
     return cell;
 }
-- (CGSize)collectionView:(UICollectionView*)collectionView collectionViewLayout:(MainCollectionViewFlowLayout*)collectionViewLayout sizeOfItemAtIndexPath:(NSIndexPath*)indexPath{
-    return CGSizeMake(0, 150);
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

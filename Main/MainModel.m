@@ -11,7 +11,7 @@
 + (NSArray<MainItem*>*)initItems{
     NSMutableArray *items = [[NSMutableArray alloc]init];
     NSString *path = [[NSBundle mainBundle]pathForResource:@"test" ofType:@"png"];
-    for (int i = 0; i<200; i++) {
+    for (int i = 0; i<10; i++) {
         MainItem *item = [[MainItem alloc]init];
         item.title = [NSString stringWithFormat:@"我是标题%d",i+1];
         item.describe = [NSString stringWithFormat:@"我是描述%d", i + 1];

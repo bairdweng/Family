@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		992DF6271F59537800C3F218 /* MainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 992DF6261F59537800C3F218 /* MainItem.m */; };
+		9944C7C81F5CDFC1002A7A81 /* WorkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944C7C71F5CDFC1002A7A81 /* WorkingViewController.m */; };
+		9944C7CC1F5CE360002A7A81 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944C7CB1F5CE360002A7A81 /* UIColor+Hex.m */; };
+		9960023A1F5BDDB100DBFEFB /* TempleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 996002391F5BDDB100DBFEFB /* TempleViewController.m */; };
+		9960023D1F5BDF7C00DBFEFB /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9960023C1F5BDF7C00DBFEFB /* CardCell.m */; };
+		996002411F5BE21200DBFEFB /* FixButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 996002401F5BE21200DBFEFB /* FixButton.m */; };
 		99E5ADFC1F58FD640007B897 /* MainCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E5ADFB1F58FD640007B897 /* MainCollectionViewFlowLayout.m */; };
 		99EC37221F59746C00070453 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 99EC37211F59746C00070453 /* test.png */; };
 		99F74A021F4FCE1000159AB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F74A011F4FCE1000159AB6 /* main.m */; };
@@ -29,6 +34,17 @@
 		793DC689A167D963D4C5ECD7 /* Pods-Family.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Family.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Family/Pods-Family.debug.xcconfig"; sourceTree = "<group>"; };
 		992DF6251F59537800C3F218 /* MainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainItem.h; sourceTree = "<group>"; };
 		992DF6261F59537800C3F218 /* MainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainItem.m; sourceTree = "<group>"; };
+		9944C7C61F5CDFC1002A7A81 /* WorkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkingViewController.h; sourceTree = "<group>"; };
+		9944C7C71F5CDFC1002A7A81 /* WorkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkingViewController.m; sourceTree = "<group>"; };
+		9944C7CA1F5CE360002A7A81 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		9944C7CB1F5CE360002A7A81 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		996002381F5BDDB100DBFEFB /* TempleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempleViewController.h; sourceTree = "<group>"; };
+		996002391F5BDDB100DBFEFB /* TempleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempleViewController.m; sourceTree = "<group>"; };
+		9960023B1F5BDF7C00DBFEFB /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
+		9960023C1F5BDF7C00DBFEFB /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
+		9960023E1F5BDFB100DBFEFB /* FYHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYHeader.h; sourceTree = "<group>"; };
+		9960023F1F5BE21200DBFEFB /* FixButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixButton.h; sourceTree = "<group>"; };
+		996002401F5BE21200DBFEFB /* FixButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixButton.m; sourceTree = "<group>"; };
 		99E5ADFA1F58FD640007B897 /* MainCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		99E5ADFB1F58FD640007B897 /* MainCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		99EC37211F59746C00070453 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
@@ -81,9 +97,35 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		9944C7C51F5CDF69002A7A81 /* WorkIng */ = {
+			isa = PBXGroup;
+			children = (
+				9944C7C61F5CDFC1002A7A81 /* WorkingViewController.h */,
+				9944C7C71F5CDFC1002A7A81 /* WorkingViewController.m */,
+			);
+			name = WorkIng;
+			sourceTree = "<group>";
+		};
+		9944C7C91F5CE0FD002A7A81 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		996002371F5BDC1300DBFEFB /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				9944C7C51F5CDF69002A7A81 /* WorkIng */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 		99F749F41F4FCE1000159AB6 = {
 			isa = PBXGroup;
 			children = (
+				9944C7C91F5CE0FD002A7A81 /* Base */,
+				996002371F5BDC1300DBFEFB /* Module */,
 				991FB61A1F5967DA00E07B3C /* images */,
 				99FAFEDB1F57E61E0050C08A /* Helper */,
 				99FAFED51F57DE9D0050C08A /* Main */,
@@ -143,6 +185,10 @@
 				99FAFEE41F57EBFA0050C08A /* MainCollectionViewCell.m */,
 				99E5ADFA1F58FD640007B897 /* MainCollectionViewFlowLayout.h */,
 				99E5ADFB1F58FD640007B897 /* MainCollectionViewFlowLayout.m */,
+				9960023B1F5BDF7C00DBFEFB /* CardCell.h */,
+				9960023C1F5BDF7C00DBFEFB /* CardCell.m */,
+				9960023F1F5BE21200DBFEFB /* FixButton.h */,
+				996002401F5BE21200DBFEFB /* FixButton.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -152,6 +198,8 @@
 			children = (
 				99F74A061F4FCE1000159AB6 /* MainViewController.h */,
 				99F74A071F4FCE1000159AB6 /* MainViewController.m */,
+				996002381F5BDDB100DBFEFB /* TempleViewController.h */,
+				996002391F5BDDB100DBFEFB /* TempleViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -161,6 +209,9 @@
 			children = (
 				99FAFEDC1F57E64E0050C08A /* FYNetworking.h */,
 				99FAFEDD1F57E64E0050C08A /* FYNetworking.m */,
+				9960023E1F5BDFB100DBFEFB /* FYHeader.h */,
+				9944C7CA1F5CE360002A7A81 /* UIColor+Hex.h */,
+				9944C7CB1F5CE360002A7A81 /* UIColor+Hex.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -309,13 +360,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				99F74A081F4FCE1000159AB6 /* MainViewController.m in Sources */,
+				996002411F5BE21200DBFEFB /* FixButton.m in Sources */,
+				9944C7C81F5CDFC1002A7A81 /* WorkingViewController.m in Sources */,
 				99F74A051F4FCE1000159AB6 /* AppDelegate.m in Sources */,
 				99FAFEE21F57E96C0050C08A /* MainModel.m in Sources */,
 				992DF6271F59537800C3F218 /* MainItem.m in Sources */,
 				99E5ADFC1F58FD640007B897 /* MainCollectionViewFlowLayout.m in Sources */,
 				99FAFEDA1F57E2A00050C08A /* MainTableViewCell.m in Sources */,
 				99FAFEE51F57EBFA0050C08A /* MainCollectionViewCell.m in Sources */,
+				9960023A1F5BDDB100DBFEFB /* TempleViewController.m in Sources */,
 				99F74A021F4FCE1000159AB6 /* main.m in Sources */,
+				9944C7CC1F5CE360002A7A81 /* UIColor+Hex.m in Sources */,
+				9960023D1F5BDF7C00DBFEFB /* CardCell.m in Sources */,
 				99FAFEDE1F57E64E0050C08A /* FYNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
