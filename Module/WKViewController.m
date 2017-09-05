@@ -6,13 +6,13 @@
 //  Copyright © 2017年 Baird-weng. All rights reserved.
 //
 
-#import "WorkingViewController.h"
+#import "WKViewController.h"
 
-@interface WorkingViewController ()
+@interface WKViewController ()
 
 @end
 
-@implementation WorkingViewController
+@implementation WKViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

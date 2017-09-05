@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface WorkingViewController : UIViewController
-
+@class WKModel;
+@interface WKViewController : UIViewController
+@property(nonatomic,strong)WKModel *model;
 @end
