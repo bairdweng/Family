@@ -16,12 +16,13 @@
     model1.details = @"记得来个提醒，看我要吃什么，麻辣烫还是什么的？";
     model1.remindTime = @"19:02";
     model1.repeats = @[@"周一",@"周二",@"周三"];
-    
+    model1.cellHeight = 100;
     
     WKModel *model2 = [[WKModel alloc]init];
-    model2.title = @"今天完成要吃宵夜";
-    model2.details = @"记得来个提醒，看我要吃什么，麻辣烫还是什么的？";
+    model2.title = @"今晚去学校跑步";
+    model2.details = @"请提醒我，要去跑步。";
     model2.remindTime = @"17:02";
+    model2.cellHeight = 100;
     model2.repeats = @[@"周一",@"周二",@"周三"];
     
     return @[model1,model2];

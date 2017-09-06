@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		991BB05E1F5FFC9C00FA8783 /* WKShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 991BB05D1F5FFC9C00FA8783 /* WKShowViewController.m */; };
+		991BB06C1F60296100FA8783 /* WKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 991BB06A1F60296100FA8783 /* WKViewController.m */; };
+		991BB06D1F60296100FA8783 /* WKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 991BB06B1F60296100FA8783 /* WKViewController.xib */; };
 		992DF6271F59537800C3F218 /* MainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 992DF6261F59537800C3F218 /* MainItem.m */; };
-		9944C7C81F5CDFC1002A7A81 /* WKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944C7C71F5CDFC1002A7A81 /* WKViewController.m */; };
 		9944C7CC1F5CE360002A7A81 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944C7CB1F5CE360002A7A81 /* UIColor+Hex.m */; };
 		9960023A1F5BDDB100DBFEFB /* TempleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 996002391F5BDDB100DBFEFB /* TempleViewController.m */; };
 		9960023D1F5BDF7C00DBFEFB /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9960023C1F5BDF7C00DBFEFB /* CardCell.m */; };
@@ -33,10 +35,13 @@
 		110B578A05AEA6E1CF622328 /* libPods-Family.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Family.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7117ADCC8E49B6DF1D05D470 /* Pods-Family.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Family.release.xcconfig"; path = "Pods/Target Support Files/Pods-Family/Pods-Family.release.xcconfig"; sourceTree = "<group>"; };
 		793DC689A167D963D4C5ECD7 /* Pods-Family.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Family.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Family/Pods-Family.debug.xcconfig"; sourceTree = "<group>"; };
+		991BB05C1F5FFC9C00FA8783 /* WKShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKShowViewController.h; sourceTree = "<group>"; };
+		991BB05D1F5FFC9C00FA8783 /* WKShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKShowViewController.m; sourceTree = "<group>"; };
+		991BB0691F60296100FA8783 /* WKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKViewController.h; sourceTree = "<group>"; };
+		991BB06A1F60296100FA8783 /* WKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKViewController.m; sourceTree = "<group>"; };
+		991BB06B1F60296100FA8783 /* WKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKViewController.xib; sourceTree = "<group>"; };
 		992DF6251F59537800C3F218 /* MainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainItem.h; sourceTree = "<group>"; };
 		992DF6261F59537800C3F218 /* MainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainItem.m; sourceTree = "<group>"; };
-		9944C7C61F5CDFC1002A7A81 /* WKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKViewController.h; sourceTree = "<group>"; };
-		9944C7C71F5CDFC1002A7A81 /* WKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKViewController.m; sourceTree = "<group>"; };
 		9944C7CA1F5CE360002A7A81 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		9944C7CB1F5CE360002A7A81 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		996002381F5BDDB100DBFEFB /* TempleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempleViewController.h; sourceTree = "<group>"; };
@@ -136,8 +141,11 @@
 		9990047B1F5ED82B008F4522 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9944C7C61F5CDFC1002A7A81 /* WKViewController.h */,
-				9944C7C71F5CDFC1002A7A81 /* WKViewController.m */,
+				991BB05C1F5FFC9C00FA8783 /* WKShowViewController.h */,
+				991BB05D1F5FFC9C00FA8783 /* WKShowViewController.m */,
+				991BB0691F60296100FA8783 /* WKViewController.h */,
+				991BB06A1F60296100FA8783 /* WKViewController.m */,
+				991BB06B1F60296100FA8783 /* WKViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -322,6 +330,7 @@
 				99F74A0D1F4FCE1000159AB6 /* Assets.xcassets in Resources */,
 				99F74A0B1F4FCE1000159AB6 /* Main.storyboard in Resources */,
 				99EC37221F59746C00070453 /* test.png in Resources */,
+				991BB06D1F60296100FA8783 /* WKViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,8 +392,9 @@
 				99F74A081F4FCE1000159AB6 /* MainViewController.m in Sources */,
 				999004791F5ED555008F4522 /* WKModel.m in Sources */,
 				996002411F5BE21200DBFEFB /* FixButton.m in Sources */,
-				9944C7C81F5CDFC1002A7A81 /* WKViewController.m in Sources */,
+				991BB05E1F5FFC9C00FA8783 /* WKShowViewController.m in Sources */,
 				99F74A051F4FCE1000159AB6 /* AppDelegate.m in Sources */,
+				991BB06C1F60296100FA8783 /* WKViewController.m in Sources */,
 				99FAFEE21F57E96C0050C08A /* MainModel.m in Sources */,
 				992DF6271F59537800C3F218 /* MainItem.m in Sources */,
 				99E5ADFC1F58FD640007B897 /* MainCollectionViewFlowLayout.m in Sources */,
