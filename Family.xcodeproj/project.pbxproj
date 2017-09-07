@@ -16,6 +16,8 @@
 		9960023D1F5BDF7C00DBFEFB /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9960023C1F5BDF7C00DBFEFB /* CardCell.m */; };
 		996002411F5BE21200DBFEFB /* FixButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 996002401F5BE21200DBFEFB /* FixButton.m */; };
 		999004791F5ED555008F4522 /* WKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 999004781F5ED555008F4522 /* WKModel.m */; };
+		99A95C2E1F613CF4008F1511 /* FYProgessHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A95C2D1F613CF4008F1511 /* FYProgessHUD.m */; };
+		99A95C321F613EBF008F1511 /* FYSlideSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A95C311F613EBF008F1511 /* FYSlideSelectView.m */; };
 		99E5ADFC1F58FD640007B897 /* MainCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E5ADFB1F58FD640007B897 /* MainCollectionViewFlowLayout.m */; };
 		99EC37221F59746C00070453 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 99EC37211F59746C00070453 /* test.png */; };
 		99F74A021F4FCE1000159AB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F74A011F4FCE1000159AB6 /* main.m */; };
@@ -53,6 +55,10 @@
 		996002401F5BE21200DBFEFB /* FixButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixButton.m; sourceTree = "<group>"; };
 		999004771F5ED555008F4522 /* WKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKModel.h; sourceTree = "<group>"; };
 		999004781F5ED555008F4522 /* WKModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKModel.m; sourceTree = "<group>"; };
+		99A95C2C1F613CF4008F1511 /* FYProgessHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYProgessHUD.h; sourceTree = "<group>"; };
+		99A95C2D1F613CF4008F1511 /* FYProgessHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYProgessHUD.m; sourceTree = "<group>"; };
+		99A95C301F613EBF008F1511 /* FYSlideSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYSlideSelectView.h; sourceTree = "<group>"; };
+		99A95C311F613EBF008F1511 /* FYSlideSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYSlideSelectView.m; sourceTree = "<group>"; };
 		99E5ADFA1F58FD640007B897 /* MainCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		99E5ADFB1F58FD640007B897 /* MainCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		99EC37211F59746C00070453 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
@@ -150,10 +156,28 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
+		99A95C2F1F613E86008F1511 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				99A95C331F613EC8008F1511 /* FYSlideSelectView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		99A95C331F613EC8008F1511 /* FYSlideSelectView */ = {
+			isa = PBXGroup;
+			children = (
+				99A95C301F613EBF008F1511 /* FYSlideSelectView.h */,
+				99A95C311F613EBF008F1511 /* FYSlideSelectView.m */,
+			);
+			name = FYSlideSelectView;
+			sourceTree = "<group>";
+		};
 		99F749F41F4FCE1000159AB6 = {
 			isa = PBXGroup;
 			children = (
 				9944C7C91F5CE0FD002A7A81 /* Base */,
+				99A95C2F1F613E86008F1511 /* Components */,
 				996002371F5BDC1300DBFEFB /* Module */,
 				991FB61A1F5967DA00E07B3C /* images */,
 				99FAFEDB1F57E61E0050C08A /* Helper */,
@@ -241,6 +265,8 @@
 				9960023E1F5BDFB100DBFEFB /* FYHeader.h */,
 				9944C7CA1F5CE360002A7A81 /* UIColor+Hex.h */,
 				9944C7CB1F5CE360002A7A81 /* UIColor+Hex.m */,
+				99A95C2C1F613CF4008F1511 /* FYProgessHUD.h */,
+				99A95C2D1F613CF4008F1511 /* FYProgessHUD.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -394,6 +420,7 @@
 				996002411F5BE21200DBFEFB /* FixButton.m in Sources */,
 				991BB05E1F5FFC9C00FA8783 /* WKShowViewController.m in Sources */,
 				99F74A051F4FCE1000159AB6 /* AppDelegate.m in Sources */,
+				99A95C2E1F613CF4008F1511 /* FYProgessHUD.m in Sources */,
 				991BB06C1F60296100FA8783 /* WKViewController.m in Sources */,
 				99FAFEE21F57E96C0050C08A /* MainModel.m in Sources */,
 				992DF6271F59537800C3F218 /* MainItem.m in Sources */,
@@ -405,6 +432,7 @@
 				9944C7CC1F5CE360002A7A81 /* UIColor+Hex.m in Sources */,
 				9960023D1F5BDF7C00DBFEFB /* CardCell.m in Sources */,
 				99FAFEDE1F57E64E0050C08A /* FYNetworking.m in Sources */,
+				99A95C321F613EBF008F1511 /* FYSlideSelectView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

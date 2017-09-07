@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WKViewController">
             <connections>
+                <outlet property="selectDateButton" destination="Bwl-2V-Etk" id="Dwp-Fg-jSJ"/>
+                <outlet property="slideSelectView" destination="2uU-R7-FSV" id="XLv-pM-12r"/>
+                <outlet property="textField" destination="HsK-gY-miW" id="3j4-Oq-iIW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,36 +22,68 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您想干什么？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xhh-tJ-9x2">
-                    <rect key="frame" x="15" y="15" width="345" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A2O-HB-kfN">
-                    <rect key="frame" x="15" y="51" width="345" height="44"/>
-                    <color key="backgroundColor" red="0.19607843459999999" green="0.75294119120000003" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rmw-Rx-1AV">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FJp-we-Ezv" userLabel="ContentView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="218"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入事务标题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HsK-gY-miW">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="skd-KV-ySY"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2uU-R7-FSV" customClass="FYSlideSelectView">
+                                    <rect key="frame" x="0.0" y="44" width="375" height="100"/>
+                                    <color key="backgroundColor" red="0.19607843459999999" green="0.75294119120000003" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="xuO-uR-gdL"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwl-2V-Etk">
+                                    <rect key="frame" x="0.0" y="144" width="375" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="Zn9-cF-bO7"/>
+                                    </constraints>
+                                    <state key="normal" title="提醒时间：17:08"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="2uU-R7-FSV" secondAttribute="trailing" id="Ama-Xp-sXr"/>
+                                <constraint firstItem="Bwl-2V-Etk" firstAttribute="top" secondItem="2uU-R7-FSV" secondAttribute="bottom" id="Nbc-41-Q5U"/>
+                                <constraint firstAttribute="trailing" secondItem="HsK-gY-miW" secondAttribute="trailing" id="Tyk-4X-omU"/>
+                                <constraint firstAttribute="trailing" secondItem="Bwl-2V-Etk" secondAttribute="trailing" id="b9t-oN-aLF"/>
+                                <constraint firstItem="2uU-R7-FSV" firstAttribute="top" secondItem="HsK-gY-miW" secondAttribute="bottom" id="fQ0-D4-cDs"/>
+                                <constraint firstItem="HsK-gY-miW" firstAttribute="top" secondItem="FJp-we-Ezv" secondAttribute="top" id="fn5-W2-7jN"/>
+                                <constraint firstItem="HsK-gY-miW" firstAttribute="leading" secondItem="FJp-we-Ezv" secondAttribute="leading" id="gF2-PT-eKT"/>
+                                <constraint firstItem="Bwl-2V-Etk" firstAttribute="leading" secondItem="FJp-we-Ezv" secondAttribute="leading" id="p8g-w4-x6j"/>
+                                <constraint firstAttribute="height" constant="218" id="t6U-MQ-cHz"/>
+                                <constraint firstItem="2uU-R7-FSV" firstAttribute="leading" secondItem="FJp-we-Ezv" secondAttribute="leading" id="v6d-Rl-vIL"/>
+                            </constraints>
+                        </view>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="dmR-2A-tEd"/>
-                        <constraint firstAttribute="height" constant="44" id="nMa-RC-geY"/>
+                        <constraint firstItem="FJp-we-Ezv" firstAttribute="top" secondItem="Rmw-Rx-1AV" secondAttribute="top" id="2Ie-7s-h5k"/>
+                        <constraint firstAttribute="bottom" secondItem="FJp-we-Ezv" secondAttribute="bottom" constant="449" id="Mce-ES-YhE"/>
+                        <constraint firstItem="FJp-we-Ezv" firstAttribute="leading" secondItem="Rmw-Rx-1AV" secondAttribute="leading" id="R0G-rZ-JYK"/>
+                        <constraint firstAttribute="trailing" secondItem="FJp-we-Ezv" secondAttribute="trailing" id="XgI-H2-30j"/>
+                        <constraint firstItem="FJp-we-Ezv" firstAttribute="width" secondItem="Rmw-Rx-1AV" secondAttribute="width" id="j1h-03-GFZ"/>
                     </constraints>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="Xhh-tJ-9x2" secondAttribute="trailing" constant="15" id="3Be-ts-4eF"/>
-                <constraint firstItem="A2O-HB-kfN" firstAttribute="top" secondItem="Xhh-tJ-9x2" secondAttribute="bottom" constant="15" id="JVB-me-7Xp"/>
-                <constraint firstItem="A2O-HB-kfN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="Of7-so-jvZ"/>
-                <constraint firstItem="A2O-HB-kfN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="Uv6-A2-95j"/>
-                <constraint firstItem="Xhh-tJ-9x2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="Vy1-Tg-x31"/>
-                <constraint firstAttribute="trailing" secondItem="A2O-HB-kfN" secondAttribute="trailing" constant="15" id="hbI-aR-icb"/>
-                <constraint firstItem="Xhh-tJ-9x2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="r2s-Io-cDR"/>
-                <constraint firstAttribute="trailing" secondItem="A2O-HB-kfN" secondAttribute="trailing" constant="15" id="r8c-RI-62v"/>
+                <constraint firstItem="Rmw-Rx-1AV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aVf-7b-5KS"/>
+                <constraint firstItem="Rmw-Rx-1AV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eSk-Oh-pcY"/>
+                <constraint firstAttribute="trailing" secondItem="Rmw-Rx-1AV" secondAttribute="trailing" id="gQA-hr-CPI"/>
+                <constraint firstAttribute="bottom" secondItem="Rmw-Rx-1AV" secondAttribute="bottom" id="p60-Zt-haY"/>
             </constraints>
-            <point key="canvasLocation" x="-475.5" y="-347.5"/>
+            <point key="canvasLocation" x="-794.5" y="-545.5"/>
         </view>
     </objects>
 </document>

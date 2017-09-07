@@ -10,4 +10,5 @@
 #define FYHeader_h
 #endif /* FYHeader_h */
 #import "masonry.h"
+#import "FYProgessHUD.h"
 #import "UIColor+Hex.h"
