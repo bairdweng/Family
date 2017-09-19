@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		991BB05E1F5FFC9C00FA8783 /* WKShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 991BB05D1F5FFC9C00FA8783 /* WKShowViewController.m */; };
 		991BB06C1F60296100FA8783 /* WKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 991BB06A1F60296100FA8783 /* WKViewController.m */; };
-		991BB06D1F60296100FA8783 /* WKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 991BB06B1F60296100FA8783 /* WKViewController.xib */; };
 		992DF6271F59537800C3F218 /* MainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 992DF6261F59537800C3F218 /* MainItem.m */; };
 		9944C7CC1F5CE360002A7A81 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944C7CB1F5CE360002A7A81 /* UIColor+Hex.m */; };
+		9947A32A1F693080006F04F3 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 9947A3291F693080006F04F3 /* Test.m */; };
 		9960023A1F5BDDB100DBFEFB /* TempleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 996002391F5BDDB100DBFEFB /* TempleViewController.m */; };
 		9960023D1F5BDF7C00DBFEFB /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9960023C1F5BDF7C00DBFEFB /* CardCell.m */; };
 		996002411F5BE21200DBFEFB /* FixButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 996002401F5BE21200DBFEFB /* FixButton.m */; };
+		99748F441F6BC54900D36BF6 /* WKCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99748F421F6BC54900D36BF6 /* WKCell.m */; };
+		99748F451F6BC54900D36BF6 /* WKCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99748F431F6BC54900D36BF6 /* WKCell.xib */; };
+		99748F491F6BCDBF00D36BF6 /* FYCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 99748F481F6BCDBF00D36BF6 /* FYCheckBox.m */; };
+		99748F4D1F6BD11B00D36BF6 /* FYCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99748F4B1F6BD11B00D36BF6 /* FYCheckCell.m */; };
+		99748F4E1F6BD11B00D36BF6 /* FYCheckCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99748F4C1F6BD11B00D36BF6 /* FYCheckCell.xib */; };
 		999004791F5ED555008F4522 /* WKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 999004781F5ED555008F4522 /* WKModel.m */; };
 		99A95C2E1F613CF4008F1511 /* FYProgessHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A95C2D1F613CF4008F1511 /* FYProgessHUD.m */; };
 		99A95C321F613EBF008F1511 /* FYSlideSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A95C311F613EBF008F1511 /* FYSlideSelectView.m */; };
@@ -41,11 +46,12 @@
 		991BB05D1F5FFC9C00FA8783 /* WKShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKShowViewController.m; sourceTree = "<group>"; };
 		991BB0691F60296100FA8783 /* WKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKViewController.h; sourceTree = "<group>"; };
 		991BB06A1F60296100FA8783 /* WKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKViewController.m; sourceTree = "<group>"; };
-		991BB06B1F60296100FA8783 /* WKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKViewController.xib; sourceTree = "<group>"; };
 		992DF6251F59537800C3F218 /* MainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainItem.h; sourceTree = "<group>"; };
 		992DF6261F59537800C3F218 /* MainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainItem.m; sourceTree = "<group>"; };
 		9944C7CA1F5CE360002A7A81 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		9944C7CB1F5CE360002A7A81 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		9947A3281F693080006F04F3 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		9947A3291F693080006F04F3 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		996002381F5BDDB100DBFEFB /* TempleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempleViewController.h; sourceTree = "<group>"; };
 		996002391F5BDDB100DBFEFB /* TempleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempleViewController.m; sourceTree = "<group>"; };
 		9960023B1F5BDF7C00DBFEFB /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
@@ -53,6 +59,14 @@
 		9960023E1F5BDFB100DBFEFB /* FYHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYHeader.h; sourceTree = "<group>"; };
 		9960023F1F5BE21200DBFEFB /* FixButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixButton.h; sourceTree = "<group>"; };
 		996002401F5BE21200DBFEFB /* FixButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixButton.m; sourceTree = "<group>"; };
+		99748F411F6BC54900D36BF6 /* WKCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKCell.h; sourceTree = "<group>"; };
+		99748F421F6BC54900D36BF6 /* WKCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKCell.m; sourceTree = "<group>"; };
+		99748F431F6BC54900D36BF6 /* WKCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKCell.xib; sourceTree = "<group>"; };
+		99748F471F6BCDBF00D36BF6 /* FYCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYCheckBox.h; sourceTree = "<group>"; };
+		99748F481F6BCDBF00D36BF6 /* FYCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYCheckBox.m; sourceTree = "<group>"; };
+		99748F4A1F6BD11B00D36BF6 /* FYCheckCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYCheckCell.h; sourceTree = "<group>"; };
+		99748F4B1F6BD11B00D36BF6 /* FYCheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYCheckCell.m; sourceTree = "<group>"; };
+		99748F4C1F6BD11B00D36BF6 /* FYCheckCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FYCheckCell.xib; sourceTree = "<group>"; };
 		999004771F5ED555008F4522 /* WKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKModel.h; sourceTree = "<group>"; };
 		999004781F5ED555008F4522 /* WKModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKModel.m; sourceTree = "<group>"; };
 		99A95C2C1F613CF4008F1511 /* FYProgessHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYProgessHUD.h; sourceTree = "<group>"; };
@@ -114,6 +128,7 @@
 		9944C7C51F5CDF69002A7A81 /* WorkIng */ = {
 			isa = PBXGroup;
 			children = (
+				99748F401F6BC52400D36BF6 /* View */,
 				9990047B1F5ED82B008F4522 /* ViewController */,
 				9990047A1F5ED593008F4522 /* Model */,
 			);
@@ -135,6 +150,28 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
+		99748F401F6BC52400D36BF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99748F411F6BC54900D36BF6 /* WKCell.h */,
+				99748F421F6BC54900D36BF6 /* WKCell.m */,
+				99748F431F6BC54900D36BF6 /* WKCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		99748F461F6BCA0C00D36BF6 /* FYCheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				99748F471F6BCDBF00D36BF6 /* FYCheckBox.h */,
+				99748F481F6BCDBF00D36BF6 /* FYCheckBox.m */,
+				99748F4A1F6BD11B00D36BF6 /* FYCheckCell.h */,
+				99748F4B1F6BD11B00D36BF6 /* FYCheckCell.m */,
+				99748F4C1F6BD11B00D36BF6 /* FYCheckCell.xib */,
+			);
+			name = FYCheckBox;
+			sourceTree = "<group>";
+		};
 		9990047A1F5ED593008F4522 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,7 +188,6 @@
 				991BB05D1F5FFC9C00FA8783 /* WKShowViewController.m */,
 				991BB0691F60296100FA8783 /* WKViewController.h */,
 				991BB06A1F60296100FA8783 /* WKViewController.m */,
-				991BB06B1F60296100FA8783 /* WKViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -159,6 +195,7 @@
 		99A95C2F1F613E86008F1511 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				99748F461F6BCA0C00D36BF6 /* FYCheckBox */,
 				99A95C331F613EC8008F1511 /* FYSlideSelectView */,
 			);
 			path = Components;
@@ -267,6 +304,8 @@
 				9944C7CB1F5CE360002A7A81 /* UIColor+Hex.m */,
 				99A95C2C1F613CF4008F1511 /* FYProgessHUD.h */,
 				99A95C2D1F613CF4008F1511 /* FYProgessHUD.m */,
+				9947A3281F693080006F04F3 /* Test.h */,
+				9947A3291F693080006F04F3 /* Test.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -356,7 +395,8 @@
 				99F74A0D1F4FCE1000159AB6 /* Assets.xcassets in Resources */,
 				99F74A0B1F4FCE1000159AB6 /* Main.storyboard in Resources */,
 				99EC37221F59746C00070453 /* test.png in Resources */,
-				991BB06D1F60296100FA8783 /* WKViewController.xib in Resources */,
+				99748F451F6BC54900D36BF6 /* WKCell.xib in Resources */,
+				99748F4E1F6BD11B00D36BF6 /* FYCheckCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +457,7 @@
 			files = (
 				99F74A081F4FCE1000159AB6 /* MainViewController.m in Sources */,
 				999004791F5ED555008F4522 /* WKModel.m in Sources */,
+				9947A32A1F693080006F04F3 /* Test.m in Sources */,
 				996002411F5BE21200DBFEFB /* FixButton.m in Sources */,
 				991BB05E1F5FFC9C00FA8783 /* WKShowViewController.m in Sources */,
 				99F74A051F4FCE1000159AB6 /* AppDelegate.m in Sources */,
@@ -424,9 +465,12 @@
 				991BB06C1F60296100FA8783 /* WKViewController.m in Sources */,
 				99FAFEE21F57E96C0050C08A /* MainModel.m in Sources */,
 				992DF6271F59537800C3F218 /* MainItem.m in Sources */,
+				99748F491F6BCDBF00D36BF6 /* FYCheckBox.m in Sources */,
+				99748F4D1F6BD11B00D36BF6 /* FYCheckCell.m in Sources */,
 				99E5ADFC1F58FD640007B897 /* MainCollectionViewFlowLayout.m in Sources */,
 				99FAFEDA1F57E2A00050C08A /* MainTableViewCell.m in Sources */,
 				99FAFEE51F57EBFA0050C08A /* MainCollectionViewCell.m in Sources */,
+				99748F441F6BC54900D36BF6 /* WKCell.m in Sources */,
 				9960023A1F5BDDB100DBFEFB /* TempleViewController.m in Sources */,
 				99F74A021F4FCE1000159AB6 /* main.m in Sources */,
 				9944C7CC1F5CE360002A7A81 /* UIColor+Hex.m in Sources */,

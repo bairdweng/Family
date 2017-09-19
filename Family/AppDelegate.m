@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Test.h"
 #import "IQKeyboardManager/IQKeyboardManager.h"
 @interface AppDelegate ()
 
@@ -20,6 +21,7 @@
     [IQKeyboardManager sharedManager].enable = YES;
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
+    [Test run];
     return YES;
 }
 

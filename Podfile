@@ -5,4 +5,5 @@ pod 'Masonry'
 pod 'IQKeyboardManager'
 pod 'MBProgressHUD'
 pod 'MJRefresh'
+pod 'BEMCheckBox'
 end
