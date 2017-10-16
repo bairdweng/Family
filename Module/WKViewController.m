@@ -81,10 +81,11 @@
         case 0:{
             FYCheckBox *checkBox = [[FYCheckBox alloc]init];
             checkBox.title = @"设置重复周期";
+            __weak typeof(self)weakSelf = self;
             [checkBox initDataSources:[self getCheckDataSource]
                             withBlock:^(NSArray<FYCheckBoxModel*>* datas) {
                                 _checkBoxModels = [[NSMutableArray alloc]initWithArray:datas];
-                                [self reloadRepeats];
+                                [weakSelf reloadRepeats];
                             }];
             [self.navigationController pushViewController:checkBox animated:YES];
         }

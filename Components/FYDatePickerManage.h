@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 @interface FYDatePickerManage : UIViewController
 typedef void (^resultdate)(NSDate *currentdate);
-@property(nonatomic,assign)UIDatePickerMode *datePickerMode;
+@property(nonatomic)UIDatePickerMode datePickerMode;
 
 -(void)KwdatePickCurrentTarget:(id)Target withDate:(NSDate *)date withresultDate:(resultdate)result;
 @end

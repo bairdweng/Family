@@ -35,9 +35,9 @@
     UITapGestureRecognizer *Tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(ClickOntheTapformFYDatePicker)];
     [self.view  addGestureRecognizer:Tap];
 }
--(void)setDatePickerMode:(UIDatePickerMode *)datePickerMode{
+-(void)setDatePickerMode:(UIDatePickerMode)datePickerMode{
     _datePickerMode = datePickerMode;
-    self.datapickerView.DatePicker.datePickerMode = datePickerMode;
+    self.datapickerView.DatePicker.datePickerMode = _datePickerMode;
 }
 -(void)ClickOntheTapformFYDatePicker{
     [UIView animateWithDuration:0.3 animations:^{

@@ -381,8 +381,8 @@
 				TargetAttributes = {
 					99F749FC1F4FCE1000159AB6 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = A7MGA9RK42;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 47425P9QYK;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -618,13 +618,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = A7MGA9RK42;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 47425P9QYK;
 				INFOPLIST_FILE = Family/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bwinfo.com.Family;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "b83db8ca-01e6-489e-887d-9b31e366760a";
+				PROVISIONING_PROFILE_SPECIFIER = comAppAllTest;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -635,13 +637,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = A7MGA9RK42;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 47425P9QYK;
 				INFOPLIST_FILE = Family/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bwinfo.com.Family;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "b83db8ca-01e6-489e-887d-9b31e366760a";
+				PROVISIONING_PROFILE_SPECIFIER = comAppAllTest;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
