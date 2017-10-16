@@ -12,3 +12,6 @@
 #import "masonry.h"
 #import "FYProgessHUD.h"
 #import "UIColor+Hex.h"
+#define NAVIGARIONBLACKCOLOR [UIColor colorWithHexString:@"2196F3"]
+#define ScreenHeight [[UIScreen mainScreen] bounds].size.height
+#define ScreenWidth [[UIScreen mainScreen] bounds].size.width

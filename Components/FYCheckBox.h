@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "FYCheckCell.h"
+typedef void (^FYCheckBoxBlock)(NSArray<FYCheckBoxModel*> *datas);
+
 @interface FYCheckBox : UIViewController
-@property (nonatomic, copy) NSArray<FYCheckBoxModel*>* dataSource;
+- (void)initDataSources:(NSArray<FYCheckBoxModel*>*)dataSources withBlock:(FYCheckBoxBlock)resultBlock;
 @end

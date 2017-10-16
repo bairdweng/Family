@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		990BA67A1F947ED800CDAD17 /* FYDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 990BA6791F947ED800CDAD17 /* FYDatePicker.m */; };
+		990BA7D71F948F1900CDAD17 /* FYDatePickerManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 990BA7D61F948F1900CDAD17 /* FYDatePickerManage.m */; };
 		991BB05E1F5FFC9C00FA8783 /* WKShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 991BB05D1F5FFC9C00FA8783 /* WKShowViewController.m */; };
 		991BB06C1F60296100FA8783 /* WKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 991BB06A1F60296100FA8783 /* WKViewController.m */; };
 		992DF6271F59537800C3F218 /* MainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 992DF6261F59537800C3F218 /* MainItem.m */; };
@@ -42,6 +44,10 @@
 		110B578A05AEA6E1CF622328 /* libPods-Family.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Family.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7117ADCC8E49B6DF1D05D470 /* Pods-Family.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Family.release.xcconfig"; path = "Pods/Target Support Files/Pods-Family/Pods-Family.release.xcconfig"; sourceTree = "<group>"; };
 		793DC689A167D963D4C5ECD7 /* Pods-Family.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Family.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Family/Pods-Family.debug.xcconfig"; sourceTree = "<group>"; };
+		990BA6781F947ED800CDAD17 /* FYDatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYDatePicker.h; sourceTree = "<group>"; };
+		990BA6791F947ED800CDAD17 /* FYDatePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYDatePicker.m; sourceTree = "<group>"; };
+		990BA7D51F948F1900CDAD17 /* FYDatePickerManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYDatePickerManage.h; sourceTree = "<group>"; };
+		990BA7D61F948F1900CDAD17 /* FYDatePickerManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYDatePickerManage.m; sourceTree = "<group>"; };
 		991BB05C1F5FFC9C00FA8783 /* WKShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKShowViewController.h; sourceTree = "<group>"; };
 		991BB05D1F5FFC9C00FA8783 /* WKShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKShowViewController.m; sourceTree = "<group>"; };
 		991BB0691F60296100FA8783 /* WKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKViewController.h; sourceTree = "<group>"; };
@@ -115,6 +121,17 @@
 				7117ADCC8E49B6DF1D05D470 /* Pods-Family.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		990BA6771F947DAB00CDAD17 /* FYDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				990BA6781F947ED800CDAD17 /* FYDatePicker.h */,
+				990BA6791F947ED800CDAD17 /* FYDatePicker.m */,
+				990BA7D51F948F1900CDAD17 /* FYDatePickerManage.h */,
+				990BA7D61F948F1900CDAD17 /* FYDatePickerManage.m */,
+			);
+			name = FYDatePicker;
 			sourceTree = "<group>";
 		};
 		991FB61A1F5967DA00E07B3C /* images */ = {
@@ -195,6 +212,7 @@
 		99A95C2F1F613E86008F1511 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				990BA6771F947DAB00CDAD17 /* FYDatePicker */,
 				99748F461F6BCA0C00D36BF6 /* FYCheckBox */,
 				99A95C331F613EC8008F1511 /* FYSlideSelectView */,
 			);
@@ -455,8 +473,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				990BA67A1F947ED800CDAD17 /* FYDatePicker.m in Sources */,
 				99F74A081F4FCE1000159AB6 /* MainViewController.m in Sources */,
 				999004791F5ED555008F4522 /* WKModel.m in Sources */,
+				990BA7D71F948F1900CDAD17 /* FYDatePickerManage.m in Sources */,
 				9947A32A1F693080006F04F3 /* Test.m in Sources */,
 				996002411F5BE21200DBFEFB /* FixButton.m in Sources */,
 				991BB05E1F5FFC9C00FA8783 /* WKShowViewController.m in Sources */,

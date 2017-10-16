@@ -15,7 +15,6 @@
 #import "WKModel.h"
 @interface MainViewController () <UITableViewDelegate, UITableViewDataSource> {
     NSArray *_dataSource;
-    
 }
 @end
 

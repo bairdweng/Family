@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <BEMCheckBox/BEMCheckBox.h>
 @interface FYCheckBoxModel : NSObject
 @property(nonatomic,copy)NSString *checkBoxText;
 @property(nonatomic,assign)BOOL isSelect;

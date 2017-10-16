@@ -11,10 +11,16 @@
 
 @interface FYCheckBox () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, weak) UITableView* tableView;
+@property (nonatomic, copy) NSArray<FYCheckBoxModel*>* dataSources;
+@property(nonatomic,strong)FYCheckBoxBlock checkBoxBlock;
+
 @end
 
 @implementation FYCheckBox
-
+- (void)initDataSources:(NSArray<FYCheckBoxModel*>*)dataSources withBlock:(FYCheckBoxBlock)resultBlock{
+    _checkBoxBlock = resultBlock;
+    self.dataSources = dataSources;
+}
 -(void)viewDidLoad{
     [super viewDidLoad];
     UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero];
@@ -26,28 +32,35 @@
     }];
     self.tableView = tableView;
     [tableView registerNib:[UINib nibWithNibName:@"FYCheckCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"FYCheckCell"];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(clickSave)];
 }
 -(void)setDataSource:(NSArray<FYCheckBoxModel *> *)dataSource{
-    _dataSource = dataSource;
+    _dataSources = dataSource;
     [self.tableView reloadData];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.dataSource.count;
+    return self.dataSources.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 50;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     FYCheckCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FYCheckCell" forIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    FYCheckBoxModel *model = _dataSource[indexPath.row];
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    FYCheckBoxModel *model = _dataSources[indexPath.row];
     cell.model = model;
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    FYCheckBoxModel *model = _dataSource[indexPath.row];
-    model.isSelect = YES;
+    FYCheckBoxModel *model = _dataSources[indexPath.row];
+    model.isSelect = !model.isSelect;
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+-(void)clickSave{
+    [self.navigationController popViewControllerAnimated:YES];
+    _checkBoxBlock(self.dataSources);
 }
 /*
 // Only override drawRect: if you perform custom drawing.
