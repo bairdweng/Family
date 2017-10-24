@@ -13,13 +13,18 @@
 #import "WKViewController.h"
 #import "WKShowViewController.h"
 #import "WKModel.h"
+#import "BaseNavigationController.h"
 @interface MainViewController () <UITableViewDelegate, UITableViewDataSource> {
     NSArray *_dataSource;
+    UITableView* _tableView;
 }
 @end
 
 @implementation MainViewController
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self reloadDatas];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我的事务";
@@ -37,7 +42,7 @@
         WKViewController *viewController = [[WKViewController alloc]init];
         viewController.title = @"添加事务";
         viewController.model = model;
-        UINavigationController *naivigation = [[UINavigationController alloc]initWithRootViewController:viewController];
+        BaseNavigationController *naivigation = [[BaseNavigationController alloc]initWithRootViewController:viewController];
         [weakself presentViewController:naivigation animated:YES completion:nil];
     }];
     [self.view addSubview:button];
@@ -47,9 +52,15 @@
     [tableView setTableHeaderView:HeaderView];
     UIView *FooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
     [tableView setTableFooterView:FooterView];
+    _tableView = tableView;
+
+
     // Do any additional setup after loading the view, typically from a nib.
 }
-
+-(void)reloadDatas{
+    _dataSource = [WKModel findWithFormat:@"WHERE recordId = '%d'", 1];
+    [_tableView reloadData];
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _dataSource.count;
 }
@@ -73,6 +84,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self editRecordWithModel:_dataSource[indexPath.row]];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

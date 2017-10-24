@@ -1,5 +1,5 @@
 //
-//  WKShowViewController.h
+//  BaseNavigationController.h
 //  Family
 //
 //  Created by Baird-weng on 2017/10/24.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class WKModel;
-@interface WKShowViewController : UIViewController
-@property(nonatomic,strong)WKModel *model;
+
+@interface BaseNavigationController : UINavigationController
 
 @end

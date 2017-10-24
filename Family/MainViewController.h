@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MainViewController : UIViewController
-
+#import "FYHeader.h"
+@interface MainViewController : BaseViewController
 
 @end
 

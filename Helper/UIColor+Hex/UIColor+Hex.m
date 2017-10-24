@@ -55,7 +55,29 @@
 }
 
 //默认alpha值为1
-+ (UIColor *)colorWithHexString:(NSString *)color{
++ (UIColor*)colorWithHexString:(NSString*)color
+{
     return [self colorWithHexString:color alpha:1.0f];
+}
++ (UIColor*)colorWithBackground
+{
+    return [self colorWithHexString:@"f2f2f2"];
+}
++ (UIColor *)colorWithNavigation{
+    return [self colorWithHexString:@"00aaff"];
+}
++ (UIColor *)colorWithText{
+    return [self colorWithHexString:@"333333"];
+}
++ (UIColor*)colorWithSecondText
+{
+    return [self colorWithHexString:@"666666"];
+}
++ (UIColor*)colorWithDounbleSecondText
+{
+    return [self colorWithHexString:@"999999"];
+}
++ (UIColor *)colorWithLine{
+    return [self colorWithHexString:@"dddddd"];
 }
 @end

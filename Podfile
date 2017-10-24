@@ -7,4 +7,6 @@ pod 'MBProgressHUD'
 pod 'MJRefresh'
 pod 'BEMCheckBox'
 pod 'DateTools'
+pod 'MJExtension'
+pod 'FSTextView'
 end

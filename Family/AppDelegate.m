@@ -7,10 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "Test.h"
 #import "IQKeyboardManager/IQKeyboardManager.h"
+#import "FYHeader.h"
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
@@ -20,7 +19,8 @@
     [IQKeyboardManager sharedManager].enable = YES;
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
-    [Test run];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    NSLog(@"%@",SandBoxpath(@""));
     return YES;
 }
 - (void)applicationWillResignActive:(UIApplication *)application {

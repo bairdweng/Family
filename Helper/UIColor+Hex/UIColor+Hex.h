@@ -11,4 +11,10 @@
 @interface UIColor (Hex)
 + (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha;
 + (UIColor *)colorWithHexString:(NSString *)color;
++ (UIColor*)colorWithBackground;
++ (UIColor *)colorWithNavigation;
++ (UIColor *)colorWithText;
++ (UIColor*)colorWithSecondText;
++ (UIColor*)colorWithDounbleSecondText;
++ (UIColor *)colorWithLine;
 @end

@@ -1,25 +1,23 @@
 //
-//  WKShowViewController.m
+//  BaseViewController.m
 //  Family
 //
 //  Created by Baird-weng on 2017/10/24.
 //  Copyright © 2017年 Baird-weng. All rights reserved.
 //
 
-#import "WKShowViewController.h"
-#import "WKModel.h"
-#import "FYHeader.h"
-@interface WKShowViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *textContentLabel;
+#import "BaseViewController.h"
+
+@interface BaseViewController ()
 
 @end
 
-@implementation WKShowViewController
+@implementation BaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.textContentLabel.text = self.model.details;
-    // Do any additional setup after loading the view from its nib.
+    
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

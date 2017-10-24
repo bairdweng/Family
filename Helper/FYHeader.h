@@ -12,6 +12,12 @@
 #import "masonry.h"
 #import "FYProgessHUD.h"
 #import "UIColor+Hex.h"
+#import "JKDBHelper.h"
+#import "MJExtension.h"
+#import "FSTextView.h"
+#import "BaseViewController.h"
+#import "JKDBModel.h"
 #define NAVIGARIONBLACKCOLOR [UIColor colorWithHexString:@"2196F3"]
 #define ScreenHeight [[UIScreen mainScreen] bounds].size.height
 #define ScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define SandBoxpath(Name)[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@",Name]]

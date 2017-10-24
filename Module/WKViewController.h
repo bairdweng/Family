@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 @class WKModel;
+
+
+
+
+
 @interface WKViewController : UIViewController
 @property(nonatomic,strong)WKModel *model;
 @end

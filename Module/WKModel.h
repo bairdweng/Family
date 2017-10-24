@@ -7,8 +7,10 @@
 //
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@interface WKModel : NSObject
+#import "JKDBModel.h"
+@interface WKModel : JKDBModel
 + (NSArray<WKModel*>*)getTempleDatas;
+@property (nonatomic, assign) NSInteger recordId;
 @property(nonatomic,strong)NSString *title;
 @property(nonatomic,strong)NSString *details;
 @property (nonatomic, strong) NSString* remindTime;
