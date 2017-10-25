@@ -1,24 +1,21 @@
 //
-//  WKShowViewController.m
+//  SettingViewController.m
 //  Family
 //
-//  Created by Baird-weng on 2017/10/24.
+//  Created by Baird-weng on 2017/10/25.
 //  Copyright © 2017年 Baird-weng. All rights reserved.
 //
 
-#import "WKShowViewController.h"
-#import "WKModel.h"
-#import "FYHeader.h"
-@interface WKShowViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *textContentLabel;
+#import "SettingViewController.h"
+
+@interface SettingViewController ()
 
 @end
 
-@implementation WKShowViewController
+@implementation SettingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.textContentLabel.text = self.model.details;
     // Do any additional setup after loading the view from its nib.
 }
 

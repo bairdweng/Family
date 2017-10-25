@@ -8,11 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class WKModel;
-
-
-
-
-
 @interface WKViewController : UIViewController
 @property(nonatomic,strong)WKModel *model;
+@property (nonatomic, assign) BOOL editorState;
 @end

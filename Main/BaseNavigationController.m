@@ -14,7 +14,7 @@
 
 @implementation BaseNavigationController
 -(void)setConfig{
-    UIImage *Navimage = [self imageWithColor:[UIColor colorWithNavigation] size:CGSizeMake(self.view.frame.size.width, 64)];
+    UIImage *Navimage = [self imageWithColor:[UIColor colorWithNavigation] size:CGSizeMake(100, 100)];
     [self.navigationBar setBackgroundImage:Navimage forBarMetrics:UIBarMetricsDefault];
     [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.navigationBar setTintColor:[UIColor whiteColor]];

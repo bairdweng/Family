@@ -60,8 +60,6 @@
         picker.maximumDate = [NSDate date];
         [WitebackgroindView addSubview:picker];
         self.DatePicker = picker;
-        
-        
         [UIView animateWithDuration:0.3 animations:^{
             self.backgroundView.frame = CGRectMake(0, ScreenHeight-Height, ScreenWidth, Height);
         }];

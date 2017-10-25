@@ -44,8 +44,7 @@ MainCollectionViewFlowLayoutDelegate>{
     MainItem *item = _dataSource[section];
     return item.images.count;
 }
-- (UICollectionViewCell*)collectionView:(UICollectionView*)collectionView cellForItemAtIndexPath:(NSIndexPath*)indexPath
-{
+- (UICollectionViewCell*)collectionView:(UICollectionView*)collectionView cellForItemAtIndexPath:(NSIndexPath*)indexPath{
     MainItem *item = _dataSource[indexPath.section];
     MainCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"conllectId" forIndexPath:indexPath];
     cell.imageURL = item.images[indexPath.row];

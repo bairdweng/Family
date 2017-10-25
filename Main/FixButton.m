@@ -21,7 +21,7 @@
     _myblock = block;
     if(self){
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.backgroundColor = [UIColor colorWithHexString:@"OOaaff"];
+        button.backgroundColor = [UIColor colorWithNavigation];
         [self addSubview:button];
         if(imageName&&imageName.length>0){
             [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
@@ -50,11 +50,17 @@
                 make.right.equalTo(@(-15));
                 make.bottom.equalTo(@(-15));
             }];
+        } else if (_position == FixButtonPositionBottomRight) {
+            [self mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.width.height.equalTo(BUTTON_WIDTH);
+                make.left.equalTo(@15);
+                make.bottom.equalTo(@(-15));
+            }];
         }
         else{
             [self mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.width.height.equalTo(BUTTON_WIDTH);
-                make.left.equalTo(@15);
+                make.centerX.equalTo(self.superview);
                 make.bottom.equalTo(@(-15));
             }];
         }

@@ -11,6 +11,7 @@
 @interface WKModel : JKDBModel
 + (NSArray<WKModel*>*)getTempleDatas;
 @property (nonatomic, assign) NSInteger recordId;
+@property (nonatomic, strong) NSString* udid;
 @property(nonatomic,strong)NSString *title;
 @property(nonatomic,strong)NSString *details;
 @property (nonatomic, strong) NSString* remindTime;

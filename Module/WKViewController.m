@@ -28,7 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(clickCancel)];
+    if(!self.editorState){
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(clickCancel)];
+    }
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(clickSave)];
     WKModel *model1 = [[WKModel alloc]init];
     model1.title = @"重复";
@@ -38,6 +40,7 @@
     model2.details = @"";
     _dataSource = @[model1,model2];
     [self initView];
+    [self reloadRepeats];
     // Do any additional setup after loading the view.
 }
 -(void)setModel:(WKModel *)model{
@@ -70,6 +73,7 @@
     [headerView addSubview:_textField];
     _textField.placeholder = @"请输入要提醒的事情";
     _textField.leftViewMode = UITextFieldViewModeAlways;
+   
     [_textField setLeftView: [[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, 0)]];
     [_textField mas_makeConstraints:^(MASConstraintMaker* make) {
         make.top.left.right.equalTo(headerView);
@@ -100,6 +104,10 @@
     CGFloat height = [headerView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
     frame.size.height = height;
     headerView.frame = frame;
+    if(self.editorState == YES){
+        _textField.text = self.model.title;
+        _textView.text = self.model.details;
+    }
     self.tableView.tableHeaderView = headerView;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -136,7 +144,7 @@
             [dataPicker KwdatePickCurrentTarget:self
                                        withDate:[NSDate date]
                                  withresultDate:^(NSDate* currentdate) {
-                                     NSString* dateString = [currentdate formattedDateWithFormat:@"HH:ss"];
+                                     NSString* dateString = [currentdate formattedDateWithFormat:@"HH:mm" timeZone:[NSTimeZone systemTimeZone]];
                                      _dateString = dateString;
                                      WKModel* model = _dataSource[indexPath.row];
                                      model.details = dateString;
@@ -176,18 +184,28 @@
 }
 -(void)clickCancel{
     [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 -(void)clickSave{
     [self dismissViewControllerAnimated:YES completion:nil];
     self.model.title = _textField.text;
     self.model.details = _textView.text;
-    NSArray* dictArray = [FYCheckBoxModel keyValuesArrayWithObjectArray:_checkBoxModels];
-    self.model.repeats =dictArray;
+    NSArray* dictArray = [FYCheckBoxModel keyValuesArrayWithObjectArray:(NSArray *)_checkBoxModels];
+    self.model.repeats = dictArray;
     self.model.recordId = 1;
+    self.model.udid = [self uuidString];
     self.model.remindTime = _dateString;
 
-    [self.model saveOrUpdate];
+    [self.model save];
 }
+-(NSString*)uuidString{
+    CFUUIDRef uuid_ref = CFUUIDCreate(NULL);
+    CFStringRef uuid_string_ref = CFUUIDCreateString(NULL, uuid_ref);
+    NSString* uuid = [NSString stringWithString:(__bridge NSString*)uuid_string_ref];
+    CFRelease(uuid_ref);
+    CFRelease(uuid_string_ref);
+    return [uuid lowercaseString];
+ }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
