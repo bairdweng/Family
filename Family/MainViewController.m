@@ -88,8 +88,7 @@
 }
 - (void)editRecordWithModel:(WKModel*)model{
     NSArray *ratt = [model.repeats mj_JSONObject];
-    model.repeats = [FYCheckBoxModel mj_keyValuesArrayWithObjectArray:ratt];
-;
+    model.repeats = [FYCheckBoxModel mj_objectArrayWithKeyValuesArray:ratt];
     WKViewController* viewController = [[WKViewController alloc] init];
     viewController.title = model.title;
     viewController.model = model;
