@@ -18,7 +18,7 @@
     NSMutableArray *_checkBoxModels;
     UITextField *_textField;
     FSTextView* _textView;
-    NSString* _dateString;
+    NSDate* _settingDate;
 }
 @property(nonatomic,weak)UITableView *tableView;
 @end
@@ -32,6 +32,7 @@
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(clickCancel)];
     }
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(clickSave)];
+    
     WKModel *model1 = [[WKModel alloc]init];
     model1.title = @"重复";
     model1.details = @"";
@@ -141,14 +142,12 @@
             break;
         case 1:{
             FYDatePickerManage *dataPicker = [[FYDatePickerManage alloc]init];
-            
             [dataPicker KwdatePickCurrentTarget:self
-                                       withDate:[NSDate date]
+                                       withDate:_settingDate
                                  withresultDate:^(NSDate* currentdate) {
-                                     NSString* dateString = [currentdate formattedDateWithFormat:@"HH:mm" timeZone:[NSTimeZone systemTimeZone]];
-                                     _dateString = dateString;
+                                     _settingDate = currentdate;
                                      WKModel* model = _dataSource[indexPath.row];
-                                     model.details = dateString;
+                                     model.details = [currentdate formattedDateWithFormat:@"HH:mm" timeZone:[NSTimeZone systemTimeZone]];
                                      [tableView reloadRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationNone];
                                  }];
             dataPicker.datePickerMode = UIDatePickerModeTime;
@@ -168,15 +167,25 @@
     }
     WKModel *model = _dataSource[0];
     model.details = rstr;
+    if(self.editorState){
+        _settingDate = [NSStringConversion conversionDateWithString:self.model.reminddate WithFormart:@"yyyy-MM-dd HH:mm:ss"];
+        WKModel *model2 = _dataSource[1];
+        model2.details = [_settingDate formattedDateWithFormat:@"HH:mm" timeZone:[NSTimeZone systemTimeZone]];
+    } else {
+        _settingDate = [NSDate date];
+    }
     [self.tableView reloadData];
 }
 -(NSMutableArray<FYCheckBoxModel *> *)getCheckDataSource{
     if(!_checkBoxModels){
         _checkBoxModels = [[NSMutableArray alloc]initWithCapacity:7];
-        NSArray *weeks = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"];
-        for (NSString *week in weeks) {
+        NSArray* weeks = @[ @"周一", @"周二", @"周三", @"周四", @"周五", @"周六", @"周日" ];
+        NSArray* weekIndexs = @[ @2, @3, @4, @5, @6, @7, @1 ];
+        for (int index =0;index<[weeks count];index++) {
+            NSString *week = weeks[index];
             FYCheckBoxModel* model = [[FYCheckBoxModel alloc] init];
             model.checkBoxText = week;
+            model.weekIndex = [weekIndexs[index]integerValue];
             model.isSelect = NO;
             [_checkBoxModels addObject:model];
         }
@@ -188,16 +197,23 @@
 
 }
 -(void)clickSave{
-    [self dismissViewControllerAnimated:YES completion:nil];
     self.model.title = _textField.text;
     self.model.details = _textView.text;
-    NSArray* dictArray = [FYCheckBoxModel keyValuesArrayWithObjectArray:(NSArray *)_checkBoxModels];
+    NSArray *att = (NSArray *)[_checkBoxModels copy];
+    NSArray* dictArray = [FYCheckBoxModel keyValuesArrayWithObjectArray:att];
     self.model.repeats = dictArray;
     self.model.recordId = 1;
-    self.model.udid = [self uuidString];
-    self.model.remindTime = _dateString;
-
-    [self.model save];
+    self.model.isSendMessage = 0;
+    if(!self.editorState){
+        self.model.udid = [self uuidString];
+    }
+    self.model.reminddate = [_settingDate formattedDateWithFormat:@"yyyy-MM-dd HH:mm:ss" timeZone:[NSTimeZone systemTimeZone]];
+    [self.model saveOrUpdate];
+    if (self.editorState) {
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 -(NSString*)uuidString{
     CFUUIDRef uuid_ref = CFUUIDCreate(NULL);
@@ -222,3 +238,4 @@
  */
 
 @end
+

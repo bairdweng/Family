@@ -8,13 +8,15 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "JKDBModel.h"
+#import "NSStringConversion.h"
 @interface WKModel : JKDBModel
-+ (NSArray<WKModel*>*)getTempleDatas;
+- (NSString*)getRemindTime;
 @property (nonatomic, assign) NSInteger recordId;
 @property (nonatomic, strong) NSString* udid;
 @property(nonatomic,strong)NSString *title;
 @property(nonatomic,strong)NSString *details;
-@property (nonatomic, strong) NSString* remindTime;
+@property (nonatomic, strong) NSString* reminddate;
 @property (nonatomic, strong) NSArray* repeats;
 @property (nonatomic, assign) CGFloat cellHeight;
+@property (nonatomic, assign) NSInteger isSendMessage;
 @end

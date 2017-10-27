@@ -26,6 +26,7 @@
 		9960023A1F5BDDB100DBFEFB /* TempleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 996002391F5BDDB100DBFEFB /* TempleViewController.m */; };
 		9960023D1F5BDF7C00DBFEFB /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9960023C1F5BDF7C00DBFEFB /* CardCell.m */; };
 		996002411F5BE21200DBFEFB /* FixButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 996002401F5BE21200DBFEFB /* FixButton.m */; };
+		9972F53C1FA32A1600CD69EF /* FYNoticeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9972F53B1FA32A1500CD69EF /* FYNoticeManager.m */; };
 		99748F441F6BC54900D36BF6 /* WKCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99748F421F6BC54900D36BF6 /* WKCell.m */; };
 		99748F451F6BC54900D36BF6 /* WKCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99748F431F6BC54900D36BF6 /* WKCell.xib */; };
 		99748F491F6BCDBF00D36BF6 /* FYCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 99748F481F6BCDBF00D36BF6 /* FYCheckBox.m */; };
@@ -35,6 +36,7 @@
 		998789491FA06F66006F79C1 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998789471FA06F66006F79C1 /* SettingViewController.xib */; };
 		99878B4B1FA090C7006F79C1 /* FYJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 99878B4A1FA090C7006F79C1 /* FYJson.m */; };
 		999004791F5ED555008F4522 /* WKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 999004781F5ED555008F4522 /* WKModel.m */; };
+		999994E31FA2D6A4006BC99A /* NSStringConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 999994E21FA2D6A4006BC99A /* NSStringConversion.m */; };
 		99A95C321F613EBF008F1511 /* FYSlideSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A95C311F613EBF008F1511 /* FYSlideSelectView.m */; };
 		99C0D8321FA03EC900D77CB1 /* FYLocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C0D8311FA03EC900D77CB1 /* FYLocalNotification.m */; };
 		99E5ADFC1F58FD640007B897 /* MainCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E5ADFB1F58FD640007B897 /* MainCollectionViewFlowLayout.m */; };
@@ -94,6 +96,8 @@
 		9960023C1F5BDF7C00DBFEFB /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
 		9960023F1F5BE21200DBFEFB /* FixButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixButton.h; sourceTree = "<group>"; };
 		996002401F5BE21200DBFEFB /* FixButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixButton.m; sourceTree = "<group>"; };
+		9972F53A1FA32A1500CD69EF /* FYNoticeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYNoticeManager.h; sourceTree = "<group>"; };
+		9972F53B1FA32A1500CD69EF /* FYNoticeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYNoticeManager.m; sourceTree = "<group>"; };
 		99748F411F6BC54900D36BF6 /* WKCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKCell.h; sourceTree = "<group>"; };
 		99748F421F6BC54900D36BF6 /* WKCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKCell.m; sourceTree = "<group>"; };
 		99748F431F6BC54900D36BF6 /* WKCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKCell.xib; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 		99878B4A1FA090C7006F79C1 /* FYJson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYJson.m; sourceTree = "<group>"; };
 		999004771F5ED555008F4522 /* WKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKModel.h; sourceTree = "<group>"; };
 		999004781F5ED555008F4522 /* WKModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKModel.m; sourceTree = "<group>"; };
+		999994E11FA2D6A4006BC99A /* NSStringConversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSStringConversion.h; sourceTree = "<group>"; };
+		999994E21FA2D6A4006BC99A /* NSStringConversion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSStringConversion.m; sourceTree = "<group>"; };
 		99A95C301F613EBF008F1511 /* FYSlideSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYSlideSelectView.h; sourceTree = "<group>"; };
 		99A95C311F613EBF008F1511 /* FYSlideSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYSlideSelectView.m; sourceTree = "<group>"; };
 		99C0D8301FA03EC900D77CB1 /* FYLocalNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYLocalNotification.h; sourceTree = "<group>"; };
@@ -177,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				9933EA621F98864000BA7896 /* FYHeader.h */,
+				999994E01FA2D63C006BC99A /* NSStringConversion */,
 				99878B481FA090B2006F79C1 /* FYJson */,
 				99C0D82F1FA03E9000D77CB1 /* FYLocalNotification */,
 				9933EA511F98864000BA7896 /* DBModel */,
@@ -269,6 +276,15 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
+		9972F53D1FA32A1A00CD69EF /* FYNoticeManager */ = {
+			isa = PBXGroup;
+			children = (
+				9972F53A1FA32A1500CD69EF /* FYNoticeManager.h */,
+				9972F53B1FA32A1500CD69EF /* FYNoticeManager.m */,
+			);
+			name = FYNoticeManager;
+			sourceTree = "<group>";
+		};
 		99748F401F6BC52400D36BF6 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,9 +334,19 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
+		999994E01FA2D63C006BC99A /* NSStringConversion */ = {
+			isa = PBXGroup;
+			children = (
+				999994E11FA2D6A4006BC99A /* NSStringConversion.h */,
+				999994E21FA2D6A4006BC99A /* NSStringConversion.m */,
+			);
+			path = NSStringConversion;
+			sourceTree = "<group>";
+		};
 		99A95C2F1F613E86008F1511 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9972F53D1FA32A1A00CD69EF /* FYNoticeManager */,
 				990BA6771F947DAB00CDAD17 /* FYDatePicker */,
 				99748F461F6BCA0C00D36BF6 /* FYCheckBox */,
 				99A95C331F613EC8008F1511 /* FYSlideSelectView */,
@@ -484,13 +510,18 @@
 		99F749F51F4FCE1000159AB6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Baird-weng";
 				TargetAttributes = {
 					99F749FC1F4FCE1000159AB6 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 47425P9QYK;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -597,11 +628,13 @@
 				992DF6271F59537800C3F218 /* MainItem.m in Sources */,
 				99748F491F6BCDBF00D36BF6 /* FYCheckBox.m in Sources */,
 				9933EA701F98864000BA7896 /* FMDatabasePool.m in Sources */,
+				9972F53C1FA32A1600CD69EF /* FYNoticeManager.m in Sources */,
 				99748F4D1F6BD11B00D36BF6 /* FYCheckCell.m in Sources */,
 				991157B81F9F37C500EC824F /* BaseViewController.m in Sources */,
 				99E5ADFC1F58FD640007B897 /* MainCollectionViewFlowLayout.m in Sources */,
 				998789481FA06F66006F79C1 /* SettingViewController.m in Sources */,
 				99C0D8321FA03EC900D77CB1 /* FYLocalNotification.m in Sources */,
+				999994E31FA2D6A4006BC99A /* NSStringConversion.m in Sources */,
 				9933EA721F98864000BA7896 /* FMResultSet.m in Sources */,
 				99FAFEDA1F57E2A00050C08A /* MainTableViewCell.m in Sources */,
 				99FAFEE51F57EBFA0050C08A /* MainCollectionViewCell.m in Sources */,
@@ -642,7 +675,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -650,7 +685,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -690,7 +729,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -698,7 +739,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

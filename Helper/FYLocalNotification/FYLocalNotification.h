@@ -10,5 +10,5 @@
 
 @interface FYLocalNotification : NSObject
 + (instancetype)sharedManager;
-- (void)showMessageTitle:(NSString*)title WithBody:(NSString*)body;
+- (void)showMessageTitle:(NSString*)title WithBody:(NSString*)body withDate:(NSDate *)date;
 @end

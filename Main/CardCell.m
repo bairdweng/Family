@@ -63,7 +63,7 @@
     _model = model;
     self.titleLabel.text = model.title;
     self.detailsLabel.text = model.details;
-    self.remindTimeLabel.text = model.remindTime;
+    self.remindTimeLabel.text = model.getRemindTime;
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

@@ -16,6 +16,7 @@
 #import "FYLocalNotification.h"
 #import "SettingViewController.h"
 #import "FYCheckCell.h"
+#import "FYNoticeManager.h"
 @interface MainViewController () <UITableViewDelegate, UITableViewDataSource> {
     NSArray *_dataSource;
     UITableView* _tableView;
@@ -33,8 +34,6 @@
     [rightBtn setImage:[UIImage imageNamed:@"setting_navigation"] forState:UIControlStateNormal];
     [rightBtn addTarget:self action:@selector(clickOntheRigtBtn) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
-    
-    
     UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     tableView.delegate = self;
     tableView.dataSource = self;
@@ -54,18 +53,20 @@
     }];
     [self.view addSubview:button];
     [button updateTheLayout];
-    _dataSource = [WKModel getTempleDatas];
+   
     UIView *HeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 1)];
     [tableView setTableHeaderView:HeaderView];
     UIView *FooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
     [tableView setTableFooterView:FooterView];
     _tableView = tableView;
-    [[FYLocalNotification sharedManager] showMessageTitle:@"提醒" WithBody:@"卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽"];
+
     // Do any additional setup after loading the view, typically from a nib.
 }
 -(void)reloadDatas{
     _dataSource = [WKModel findWithFormat:@"WHERE recordId = '%d'", 1];
     [_tableView reloadData];
+    [[FYNoticeManager sharedManager]activation];
+
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _dataSource.count;
@@ -106,6 +107,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         WKModel *model = _dataSource[indexPath.row];
         [WKModel deleteObjectsWithFormat:@"WHERE udid = '%@'",model.udid];
+        [[FYNoticeManager sharedManager] cleanLocalNoticationById:model.udid];
         _dataSource = [WKModel findWithFormat:@"WHERE recordId = '%d'", 1];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
     }

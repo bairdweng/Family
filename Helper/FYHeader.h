@@ -18,6 +18,8 @@
 #import "BaseViewController.h"
 #import "JKDBModel.h"
 #import "FYJson.h"
+#import "NSStringConversion.h"
+#define FYLOCALNOTIFICATIONID @"FYLOCALNOTIFICATIONID"
 #define NAVIGARIONBLACKCOLOR [UIColor colorWithHexString:@"2196F3"]
 #define ScreenHeight [[UIScreen mainScreen] bounds].size.height
 #define ScreenWidth [[UIScreen mainScreen] bounds].size.width

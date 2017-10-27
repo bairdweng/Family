@@ -7,24 +7,11 @@
 //
 
 #import "WKModel.h"
-
+#import "DateTools.h"
 @implementation WKModel
-+ (NSArray<WKModel*>*)getTempleDatas
-{
-    WKModel *model1 = [[WKModel alloc]init];
-    model1.title = @"今天完成要吃宵夜";
-    model1.details = @"记得来个提醒，看我要吃什么，麻辣烫还是什么的？";
-    model1.remindTime = @"19:02";
-    model1.repeats = @[@"周一",@"周二",@"周三"];
-    model1.cellHeight = 100;
-    
-    WKModel *model2 = [[WKModel alloc]init];
-    model2.title = @"今晚去学校跑步";
-    model2.details = @"请提醒我，要去跑步。";
-    model2.remindTime = @"17:02";
-    model2.cellHeight = 100;
-    model2.repeats = @[@"周一",@"周二",@"周三"];
-    
-    return @[model1,model2];
+
+- (NSString *)getRemindTime{
+    NSDate *date = [NSStringConversion conversionDateWithString:self.reminddate WithFormart:@"yyyy-MM-dd HH:mm:ss"];
+    return [date formattedDateWithFormat:@"HH:mm" timeZone:[NSTimeZone systemTimeZone]];
 }
 @end

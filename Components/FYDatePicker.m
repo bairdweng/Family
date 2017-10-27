@@ -57,7 +57,8 @@
         UIDatePicker *picker = [[UIDatePicker alloc]initWithFrame:CGRectMake(0, 40, ScreenWidth, PickHeight)];
         picker.backgroundColor = [UIColor whiteColor];
         picker.datePickerMode = UIDatePickerModeDate;
-        picker.maximumDate = [NSDate date];
+        
+//        picker.maximumDate = [NSDate date];
         [WitebackgroindView addSubview:picker];
         self.DatePicker = picker;
         [UIView animateWithDuration:0.3 animations:^{

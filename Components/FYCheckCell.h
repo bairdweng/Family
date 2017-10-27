@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 @interface FYCheckBoxModel : NSObject
 @property(nonatomic,copy)NSString *checkBoxText;
+@property(nonatomic,assign)NSInteger weekIndex;
 @property(nonatomic,assign)BOOL isSelect;
 @end
 
