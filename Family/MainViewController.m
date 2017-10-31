@@ -17,8 +17,12 @@
 #import "SettingViewController.h"
 #import "FYCheckCell.h"
 #import "FYNoticeManager.h"
+#import "MainModel.h"
+#import "SADModel.h"
+#import "FunctionSADCell.h"
+#import "SingleAndDoubleViewController.h"
 @interface MainViewController () <UITableViewDelegate, UITableViewDataSource> {
-    NSArray *_dataSource;
+    NSMutableArray *_dataSource;
     UITableView* _tableView;
 }
 @end
@@ -26,6 +30,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self reloadDatas];
+    [_tableView reloadData];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,6 +47,8 @@
         make.edges.equalTo(self.view);
     }];
     [tableView registerClass:[CardCell class] forCellReuseIdentifier:@"cardcell"];
+    [tableView registerClass:[FunctionSADCell class] forCellReuseIdentifier:@"FunctionSADCell"];
+
     __weak typeof(self) weakself = self;
     FixButton *button = [[FixButton alloc]initWithImageName:@"add" withPosition:FixButtonPositionBottomMiddle withEvents:^(UIButton *button) {
         WKModel *model = [[WKModel alloc]init];;
@@ -53,39 +60,94 @@
     }];
     [self.view addSubview:button];
     [button updateTheLayout];
-   
-    UIView *HeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 1)];
-    [tableView setTableHeaderView:HeaderView];
+  
+    [self setTableViewHeader];
     UIView *FooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
     [tableView setTableFooterView:FooterView];
     _tableView = tableView;
 
     // Do any additional setup after loading the view, typically from a nib.
 }
+-(void)setTableViewHeader{
+    UIView *HeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 1)];
+    [_tableView setTableHeaderView:HeaderView];
+}
 -(void)reloadDatas{
-    _dataSource = [WKModel findWithFormat:@"WHERE recordId = '%d'", 1];
-    [_tableView reloadData];
-    [[FYNoticeManager sharedManager]activation];
+    if (!_dataSource){
+        _dataSource = [[NSMutableArray alloc]init];
+    }
+    [_dataSource removeAllObjects];
+    [_dataSource addObject:[self getSADModel]];
+    NSArray* models = [WKModel findWithFormat:@"WHERE recordId = '%d'", 1];
+    for (WKModel *model in models) {
+        MainModel *m_model = [[MainModel alloc]init];
+        m_model.stype = FunctionModuleTypeWorking;
+        m_model.model = model;
+        m_model.cellHeight = 80;
+        [_dataSource addObject:m_model];
+    }
+    [[FYNoticeManager sharedManager] activation];
+}
 
+-(MainModel *)getSADModel
+{
+    MainModel *m_model = [[MainModel alloc]init];
+    m_model.cellHeight = 44;
+    m_model.stype = FunctionModuleTypeSingleAndDouble;
+    SADModel* model = [[SADModel alloc] init];
+    model.title = @"本周休息情况";
+    model.details = @"单休";
+    m_model.model = model;
+    return m_model;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _dataSource.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 85;
+    MainModel* m_model = _dataSource[indexPath.row];
+    return m_model.cellHeight;
 }
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    CardCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cardcell" forIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    WKModel *model = _dataSource[indexPath.row];
-    cell.model = model;
-    return cell;
+    MainModel* m_model = _dataSource[indexPath.row];
+    switch (m_model.stype) {
+    case FunctionModuleTypeWorking: {
+        CardCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cardcell" forIndexPath:indexPath];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        WKModel* model = (WKModel*)m_model.model;
+        cell.model = model;
+        return cell;
+    }
+            break;
+    case FunctionModuleTypeSingleAndDouble: {
+        FunctionSADCell* cell = [tableView dequeueReusableCellWithIdentifier:@"FunctionSADCell" forIndexPath:indexPath];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.model = m_model.model;
+        return cell;
+    }
+            break;
+        default:{
+            return nil;
+        }
+            break;
+    }
 }
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self editRecordWithModel:_dataSource[indexPath.row]];
+    MainModel* m_model = _dataSource[indexPath.row];
+    switch (m_model.stype) {
+        case FunctionModuleTypeWorking:
+            [self editRecordWithModel:m_model.model];
+            break;
+        case FunctionModuleTypeSingleAndDouble:{
+            SingleAndDoubleViewController* ViewController = [[SingleAndDoubleViewController alloc] init];
+            [self.navigationController pushViewController:ViewController animated:YES];
+        }
+            break;
+        default:
+            break;
+    }
 }
 - (void)editRecordWithModel:(WKModel*)model{
     NSArray *ratt = [model.repeats mj_JSONObject];
@@ -105,11 +167,20 @@
 }
 - (void)tableView:(UITableView*)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath*)indexPath{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        WKModel *model = _dataSource[indexPath.row];
-        [WKModel deleteObjectsWithFormat:@"WHERE udid = '%@'",model.udid];
-        [[FYNoticeManager sharedManager] cleanLocalNoticationById:model.udid];
-        _dataSource = [WKModel findWithFormat:@"WHERE recordId = '%d'", 1];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        MainModel* m_model = _dataSource[indexPath.row];
+        switch (m_model.stype) {
+        case FunctionModuleTypeWorking: {
+            WKModel* model = m_model.model;
+            [WKModel deleteObjectsWithFormat:@"WHERE udid = '%@'", model.udid];
+            [[FYNoticeManager sharedManager] cleanLocalNoticationById:model.udid];
+            [self reloadDatas];
+            [tableView deleteRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationLeft];
+        }
+            break;
+            default:
+                break;
+        }
+       
     }
 }
 -(void)clickOntheRigtBtn{
@@ -124,3 +195,4 @@
 
 
 @end
+

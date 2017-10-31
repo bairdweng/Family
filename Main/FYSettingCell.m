@@ -14,6 +14,8 @@
 
 @interface FYSettingCell()
 @property (nonatomic, weak) UILabel* mytextLabel;
+@property (nonatomic, weak) UILabel* mycontentLabel;
+
 @end
 @implementation FYSettingCell
 
@@ -32,6 +34,13 @@
         make.height.centerY.equalTo(self.contentView);
     }];
     self.mytextLabel = mytextLabel;
+    UILabel* mycontentLabel = [UILabel new];
+    [self.contentView addSubview:mycontentLabel];
+    [mycontentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(@(-10));
+        make.height.centerY.equalTo(self.contentView);
+    }];
+    self.mycontentLabel = mycontentLabel;
 }
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -40,11 +49,11 @@
 -(void)setModel:(FYSettingModel *)model{
     _model = model;
     self.mytextLabel.text = model.title;
+    self.mycontentLabel.text = model.content;
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
 }
-
 @end

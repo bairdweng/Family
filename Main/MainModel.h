@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "MainItem.h"
+#import <UIKit/UIKit.h>
+typedef NS_ENUM(NSInteger, FunctionModuleType) {
+    FunctionModuleTypeWorking,
+    FunctionModuleTypeSingleAndDouble
+};
 @interface MainModel : NSObject
 + (NSArray<MainItem*>*)initItems;
+@property (nonatomic, assign) FunctionModuleType stype;
+@property (nonatomic, assign) CGFloat cellHeight;
+@property (nonatomic, strong) id model;
 @end

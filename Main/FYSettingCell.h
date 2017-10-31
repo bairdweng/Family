@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @interface FYSettingModel : NSObject
 @property (nonatomic, strong) NSString* title;
-//@property (nonatomic, assign) NSInteger index;
+@property (nonatomic, strong) NSString* content;
 @end
 
 @interface FYSettingCell : UITableViewCell

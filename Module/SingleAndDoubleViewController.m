@@ -1,22 +1,23 @@
 //
-//  BaseViewController.m
+//  SingleAndDoubleViewController.m
 //  Family
 //
-//  Created by Baird-weng on 2017/10/24.
+//  Created by Baird-weng on 2017/10/31.
 //  Copyright © 2017年 Baird-weng. All rights reserved.
 //
-
-#import "BaseViewController.h"
-
-@interface BaseViewController ()
+//#import "FScalendar.h"
+#import "SingleAndDoubleViewController.h"
+#import <FScalendar/FScalendar.h>
+@interface SingleAndDoubleViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation SingleAndDoubleViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"查看什么时候双休";
+    
     // Do any additional setup after loading the view.
 }
 

@@ -9,10 +9,11 @@
 #import "SettingViewController.h"
 #import "FYSettingCell.h"
 #import "FYHeader.h"
+#import "SettingDataBase.h"
 @interface SettingViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) UITableView* dataTableView;
 @property (nonatomic, strong) NSMutableArray* dataSource;
-
+@property (nonatomic, strong) SettingDataBase* dataBaseModel;
 @end
 
 @implementation SettingViewController
@@ -35,12 +36,15 @@
         self.dataSource = [[NSMutableArray alloc] init];
     }
     [self.dataSource removeAllObjects];
-    NSArray* att = @[ @"设置", @"设置", @"设置", @"设置" ];
-    for (int i = 0; i<[att count]; i++) {
-        FYSettingModel *model = [[FYSettingModel alloc]init];
-        model.title = att[i];
-        [self.dataSource addObject:model];
+
+    self.dataBaseModel = [SettingDataBase findByPK:1];
+    if(!self.dataBaseModel){
+        self.dataBaseModel = [[SettingDataBase alloc]init];
     }
+    FYSettingModel *model1 = [[FYSettingModel alloc]init];
+    model1.title = @"本周休息情况";
+    model1.content = self.dataBaseModel.restString;
+    [self.dataSource addObject:model1];
     [self.dataTableView reloadData];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -57,6 +61,46 @@
 }
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch (indexPath.row) {
+    case 0: {
+        UIAlertController *alertViewController = [UIAlertController alertControllerWithTitle:@"本周休息时间" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertAction* action1 = [UIAlertAction actionWithTitle:@"单休"
+                                                          style:UIAlertActionStyleDefault
+                                                        handler:^(UIAlertAction* _Nonnull action) {
+                                                            FYSettingModel* model = self.dataSource[indexPath.row];
+                                                            model.content = @"单休";
+                                                            self.dataBaseModel.restString = @"单休";
+                                                            self.dataBaseModel.restState = 1;
+                                                            self.dataBaseModel.lastTime = [NSString stringWithFormat:@"%f", [[NSDate date] timeIntervalSince1970]];
+                                                            [self.dataBaseModel saveOrUpdate];
+
+                                                            [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                                                        }];
+        UIAlertAction* action2 = [UIAlertAction actionWithTitle:@"双休"
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction* _Nonnull action){
+                                                           FYSettingModel* model = self.dataSource[indexPath.row];
+                                                           model.content = @"双休";
+                                                           self.dataBaseModel.restString = @"双休";
+                                                           self.dataBaseModel.lastTime = [NSString stringWithFormat:@"%f", [[NSDate date] timeIntervalSince1970]];
+                                                           self.dataBaseModel.restState = 2;
+                                                           [self.dataBaseModel saveOrUpdate];
+                                                           [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                                           
+                                                       }];
+        UIAlertAction* action3 = [UIAlertAction actionWithTitle:@"取消"
+                                                          style:UIAlertActionStyleCancel
+                                                        handler:nil];
+        [alertViewController addAction:action1];
+        [alertViewController addAction:action2];
+        [alertViewController addAction:action3];
+        [self.navigationController presentViewController:alertViewController animated:YES completion:nil];
+        }
+            break;
+            
+        default:
+            break;
+    }
 //    [self editRecordWithModel:_dataSource[indexPath.row]];
 }
 - (void)didReceiveMemoryWarning {

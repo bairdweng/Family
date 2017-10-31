@@ -9,4 +9,5 @@ pod 'BEMCheckBox'
 pod 'DateTools'
 pod 'MJExtension'
 pod 'FSTextView'
+pod 'FSCalendar'
 end

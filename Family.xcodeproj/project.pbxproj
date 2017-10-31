@@ -23,6 +23,8 @@
 		9933EA731F98864000BA7896 /* FYNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9933EA651F98864000BA7896 /* FYNetworking.m */; };
 		9933EA741F98864000BA7896 /* FYProgessHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9933EA681F98864000BA7896 /* FYProgessHUD.m */; };
 		9933EA751F98864000BA7896 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 9933EA6B1F98864000BA7896 /* UIColor+Hex.m */; };
+		9945AFC71FA874B600FF8BBF /* FunctionSADCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9945AFC61FA874B600FF8BBF /* FunctionSADCell.m */; };
+		9945AFCC1FA878D500FF8BBF /* SingleAndDoubleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9945AFCB1FA878D500FF8BBF /* SingleAndDoubleViewController.m */; };
 		9960023A1F5BDDB100DBFEFB /* TempleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 996002391F5BDDB100DBFEFB /* TempleViewController.m */; };
 		9960023D1F5BDF7C00DBFEFB /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9960023C1F5BDF7C00DBFEFB /* CardCell.m */; };
 		996002411F5BE21200DBFEFB /* FixButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 996002401F5BE21200DBFEFB /* FixButton.m */; };
@@ -37,6 +39,8 @@
 		999004791F5ED555008F4522 /* WKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 999004781F5ED555008F4522 /* WKModel.m */; };
 		999994E31FA2D6A4006BC99A /* NSStringConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 999994E21FA2D6A4006BC99A /* NSStringConversion.m */; };
 		99A95C321F613EBF008F1511 /* FYSlideSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A95C311F613EBF008F1511 /* FYSlideSelectView.m */; };
+		99B0A4951FA84AE800C79A6D /* SettingDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0A4941FA84AE800C79A6D /* SettingDataBase.m */; };
+		99B0A69D1FA85ED500C79A6D /* SADModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0A69C1FA85ED500C79A6D /* SADModel.m */; };
 		99C0D8321FA03EC900D77CB1 /* FYLocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C0D8311FA03EC900D77CB1 /* FYLocalNotification.m */; };
 		99E5ADFC1F58FD640007B897 /* MainCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E5ADFB1F58FD640007B897 /* MainCollectionViewFlowLayout.m */; };
 		99EC37221F59746C00070453 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 99EC37211F59746C00070453 /* test.png */; };
@@ -90,6 +94,10 @@
 		9933EA681F98864000BA7896 /* FYProgessHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYProgessHUD.m; sourceTree = "<group>"; };
 		9933EA6A1F98864000BA7896 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		9933EA6B1F98864000BA7896 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		9945AFC51FA874B600FF8BBF /* FunctionSADCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionSADCell.h; sourceTree = "<group>"; };
+		9945AFC61FA874B600FF8BBF /* FunctionSADCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionSADCell.m; sourceTree = "<group>"; };
+		9945AFCA1FA878D500FF8BBF /* SingleAndDoubleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleAndDoubleViewController.h; sourceTree = "<group>"; };
+		9945AFCB1FA878D500FF8BBF /* SingleAndDoubleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleAndDoubleViewController.m; sourceTree = "<group>"; };
 		996002381F5BDDB100DBFEFB /* TempleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempleViewController.h; sourceTree = "<group>"; };
 		996002391F5BDDB100DBFEFB /* TempleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempleViewController.m; sourceTree = "<group>"; };
 		9960023B1F5BDF7C00DBFEFB /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
@@ -116,6 +124,10 @@
 		999994E21FA2D6A4006BC99A /* NSStringConversion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSStringConversion.m; sourceTree = "<group>"; };
 		99A95C301F613EBF008F1511 /* FYSlideSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYSlideSelectView.h; sourceTree = "<group>"; };
 		99A95C311F613EBF008F1511 /* FYSlideSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYSlideSelectView.m; sourceTree = "<group>"; };
+		99B0A4931FA84AE800C79A6D /* SettingDataBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingDataBase.h; sourceTree = "<group>"; };
+		99B0A4941FA84AE800C79A6D /* SettingDataBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingDataBase.m; sourceTree = "<group>"; };
+		99B0A69B1FA85ED500C79A6D /* SADModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SADModel.h; sourceTree = "<group>"; };
+		99B0A69C1FA85ED500C79A6D /* SADModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SADModel.m; sourceTree = "<group>"; };
 		99C0D8301FA03EC900D77CB1 /* FYLocalNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYLocalNotification.h; sourceTree = "<group>"; };
 		99C0D8311FA03EC900D77CB1 /* FYLocalNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYLocalNotification.m; sourceTree = "<group>"; };
 		99E5ADFA1F58FD640007B897 /* MainCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewFlowLayout.h; sourceTree = "<group>"; };
@@ -269,9 +281,28 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		9945AFC81FA878AC00FF8BBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99B0A69B1FA85ED500C79A6D /* SADModel.h */,
+				99B0A69C1FA85ED500C79A6D /* SADModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9945AFC91FA878BA00FF8BBF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9945AFCA1FA878D500FF8BBF /* SingleAndDoubleViewController.h */,
+				9945AFCB1FA878D500FF8BBF /* SingleAndDoubleViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		996002371F5BDC1300DBFEFB /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				99B0A69A1FA85E4900C79A6D /* SingleAndDouble */,
 				9944C7C51F5CDF69002A7A81 /* WorkIng */,
 			);
 			path = Module;
@@ -364,6 +395,15 @@
 			name = FYSlideSelectView;
 			sourceTree = "<group>";
 		};
+		99B0A69A1FA85E4900C79A6D /* SingleAndDouble */ = {
+			isa = PBXGroup;
+			children = (
+				9945AFC91FA878BA00FF8BBF /* ViewController */,
+				9945AFC81FA878AC00FF8BBF /* Model */,
+			);
+			name = SingleAndDouble;
+			sourceTree = "<group>";
+		};
 		99C0D82F1FA03E9000D77CB1 /* FYLocalNotification */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,6 +483,8 @@
 				996002401F5BE21200DBFEFB /* FixButton.m */,
 				99F1FC581FA6C680002C1C44 /* FYSettingCell.h */,
 				99F1FC591FA6C680002C1C44 /* FYSettingCell.m */,
+				9945AFC51FA874B600FF8BBF /* FunctionSADCell.h */,
+				9945AFC61FA874B600FF8BBF /* FunctionSADCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -471,6 +513,8 @@
 				99FAFEE11F57E96C0050C08A /* MainModel.m */,
 				992DF6251F59537800C3F218 /* MainItem.h */,
 				992DF6261F59537800C3F218 /* MainItem.m */,
+				99B0A4931FA84AE800C79A6D /* SettingDataBase.h */,
+				99B0A4941FA84AE800C79A6D /* SettingDataBase.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -615,6 +659,8 @@
 			files = (
 				990BA67A1F947ED800CDAD17 /* FYDatePicker.m in Sources */,
 				9933EA751F98864000BA7896 /* UIColor+Hex.m in Sources */,
+				9945AFC71FA874B600FF8BBF /* FunctionSADCell.m in Sources */,
+				9945AFCC1FA878D500FF8BBF /* SingleAndDoubleViewController.m in Sources */,
 				99878B4B1FA090C7006F79C1 /* FYJson.m in Sources */,
 				99F74A081F4FCE1000159AB6 /* MainViewController.m in Sources */,
 				9933EA741F98864000BA7896 /* FYProgessHUD.m in Sources */,
@@ -622,6 +668,7 @@
 				999004791F5ED555008F4522 /* WKModel.m in Sources */,
 				990BA7D71F948F1900CDAD17 /* FYDatePickerManage.m in Sources */,
 				996002411F5BE21200DBFEFB /* FixButton.m in Sources */,
+				99B0A69D1FA85ED500C79A6D /* SADModel.m in Sources */,
 				99F74A051F4FCE1000159AB6 /* AppDelegate.m in Sources */,
 				9933EA731F98864000BA7896 /* FYNetworking.m in Sources */,
 				9933EA6E1F98864000BA7896 /* FMDatabase.m in Sources */,
@@ -632,6 +679,7 @@
 				9972F53C1FA32A1600CD69EF /* FYNoticeManager.m in Sources */,
 				99748F4D1F6BD11B00D36BF6 /* FYCheckCell.m in Sources */,
 				99F1FC5A1FA6C680002C1C44 /* FYSettingCell.m in Sources */,
+				99B0A4951FA84AE800C79A6D /* SettingDataBase.m in Sources */,
 				991157B81F9F37C500EC824F /* BaseViewController.m in Sources */,
 				99E5ADFC1F58FD640007B897 /* MainCollectionViewFlowLayout.m in Sources */,
 				998789481FA06F66006F79C1 /* SettingViewController.m in Sources */,
