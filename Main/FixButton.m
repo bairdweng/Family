@@ -21,7 +21,7 @@
     _myblock = block;
     if(self){
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.backgroundColor = [UIColor colorWithNavigation];
+        button.backgroundColor = [FYColorManagement sharedManager].themColor;
         [self addSubview:button];
         if(imageName&&imageName.length>0){
             [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];

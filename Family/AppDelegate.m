@@ -27,6 +27,16 @@
     }
     [[FYNoticeManager sharedManager] cancelAllLocalNotifications];
     [[FYNoticeManager sharedManager]activation];
+    
+    
+//    NSString* themColorstr = [[NSUserDefaults standardUserDefaults] objectForKey:FYRHENCOLORSTRING];
+//    if(themColorstr&&themColorstr.length>0){
+//        [FYColorManagement sharedManager].themColor = [UIColor colorWithHexString:themColorstr];
+//    } else {
+//         [FYColorManagement sharedManager].themColor = [UIColor colorWithNavigation];
+//    }
+    [FYColorManagement sharedManager].themColor = [UIColor redColor];
+
     NSLog(@"%@",SandBoxpath(@""));
     return YES;
 }

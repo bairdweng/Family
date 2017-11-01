@@ -10,6 +10,7 @@
 #import "FYSettingCell.h"
 #import "FYHeader.h"
 #import "SettingDataBase.h"
+#import "FYDateResult.h"
 @interface SettingViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) UITableView* dataTableView;
 @property (nonatomic, strong) NSMutableArray* dataSource;
@@ -43,7 +44,7 @@
     }
     FYSettingModel *model1 = [[FYSettingModel alloc]init];
     model1.title = @"本周休息情况";
-    model1.content = self.dataBaseModel.restString;
+    model1.content = [FYDateResult getResultStringByDate:[NSDate date]];
     [self.dataSource addObject:model1];
     [self.dataTableView reloadData];
 }
@@ -71,7 +72,7 @@
                                                             model.content = @"单休";
                                                             self.dataBaseModel.restString = @"单休";
                                                             self.dataBaseModel.restState = 1;
-                                                            self.dataBaseModel.lastTime = [NSString stringWithFormat:@"%f", [[NSDate date] timeIntervalSince1970]];
+                                                            self.dataBaseModel.lastTime = [[NSDate date] formattedDateWithFormat:@"yyyy-MM-dd" timeZone:[NSTimeZone systemTimeZone]];
                                                             [self.dataBaseModel saveOrUpdate];
 
                                                             [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
@@ -82,11 +83,10 @@
                                                            FYSettingModel* model = self.dataSource[indexPath.row];
                                                            model.content = @"双休";
                                                            self.dataBaseModel.restString = @"双休";
-                                                           self.dataBaseModel.lastTime = [NSString stringWithFormat:@"%f", [[NSDate date] timeIntervalSince1970]];
+                                                           self.dataBaseModel.lastTime = [[NSDate date] formattedDateWithFormat:@"yyyy-MM-dd" timeZone:[NSTimeZone systemTimeZone]];
                                                            self.dataBaseModel.restState = 2;
                                                            [self.dataBaseModel saveOrUpdate];
                                                            [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-                                           
                                                        }];
         UIAlertAction* action3 = [UIAlertAction actionWithTitle:@"取消"
                                                           style:UIAlertActionStyleCancel

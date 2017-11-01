@@ -21,6 +21,7 @@
 #import "SADModel.h"
 #import "FunctionSADCell.h"
 #import "SingleAndDoubleViewController.h"
+#import "FYDateResult.h"
 @interface MainViewController () <UITableViewDelegate, UITableViewDataSource> {
     NSMutableArray *_dataSource;
     UITableView* _tableView;
@@ -65,7 +66,11 @@
     UIView *FooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
     [tableView setTableFooterView:FooterView];
     _tableView = tableView;
-
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [[FYColorManagement sharedManager]setThemeColorStr:@"ffab19"];
+        [FYColorManagement sharedManager].themColor = [UIColor yellowColor];
+    });
     // Do any additional setup after loading the view, typically from a nib.
 }
 -(void)setTableViewHeader{
@@ -77,7 +82,11 @@
         _dataSource = [[NSMutableArray alloc]init];
     }
     [_dataSource removeAllObjects];
-    [_dataSource addObject:[self getSADModel]];
+    
+    MainModel *SdModel = [self getSADModel];
+    if(SdModel){
+        [_dataSource addObject:[self getSADModel]];
+    }
     NSArray* models = [WKModel findWithFormat:@"WHERE recordId = '%d'", 1];
     for (WKModel *model in models) {
         MainModel *m_model = [[MainModel alloc]init];
@@ -89,14 +98,17 @@
     [[FYNoticeManager sharedManager] activation];
 }
 
--(MainModel *)getSADModel
-{
+-(MainModel *)getSADModel{
+    NSInteger res = [FYDateResult getResultByDate:[NSDate date]];
+    if(res == -1){
+        return nil;
+    }
     MainModel *m_model = [[MainModel alloc]init];
     m_model.cellHeight = 44;
     m_model.stype = FunctionModuleTypeSingleAndDouble;
     SADModel* model = [[SADModel alloc] init];
     model.title = @"本周休息情况";
-    model.details = @"单休";
+    model.details = [FYDateResult getResultStringByDate:[NSDate date]];
     m_model.model = model;
     return m_model;
 }
@@ -177,10 +189,9 @@
             [tableView deleteRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationLeft];
         }
             break;
-            default:
-                break;
+        default:
+            break;
         }
-       
     }
 }
 -(void)clickOntheRigtBtn{
@@ -192,7 +203,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 @end
 

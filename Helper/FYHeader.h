@@ -19,7 +19,10 @@
 #import "JKDBModel.h"
 #import "FYJson.h"
 #import "NSStringConversion.h"
+#import "DateTools.h"
+#import "FYColorManagement.h"
 #define FYLOCALNOTIFICATIONID @"FYLOCALNOTIFICATIONID"
+#define FYRHENCOLORSTRING @"FYRHENCOLORSTRING"
 #define NAVIGARIONBLACKCOLOR [UIColor colorWithHexString:@"2196F3"]
 #define ScreenHeight [[UIScreen mainScreen] bounds].size.height
 #define ScreenWidth [[UIScreen mainScreen] bounds].size.width

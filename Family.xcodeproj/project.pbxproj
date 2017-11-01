@@ -42,6 +42,8 @@
 		99B0A4951FA84AE800C79A6D /* SettingDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0A4941FA84AE800C79A6D /* SettingDataBase.m */; };
 		99B0A69D1FA85ED500C79A6D /* SADModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0A69C1FA85ED500C79A6D /* SADModel.m */; };
 		99C0D8321FA03EC900D77CB1 /* FYLocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C0D8311FA03EC900D77CB1 /* FYLocalNotification.m */; };
+		99D2AE931FA9CA3F0008945A /* FYDateResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D2AE921FA9CA3F0008945A /* FYDateResult.m */; };
+		99D2AE961FA9D4180008945A /* FYColorManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D2AE951FA9D4180008945A /* FYColorManagement.m */; };
 		99E5ADFC1F58FD640007B897 /* MainCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E5ADFB1F58FD640007B897 /* MainCollectionViewFlowLayout.m */; };
 		99EC37221F59746C00070453 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 99EC37211F59746C00070453 /* test.png */; };
 		99F1FC5A1FA6C680002C1C44 /* FYSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F1FC591FA6C680002C1C44 /* FYSettingCell.m */; };
@@ -130,6 +132,10 @@
 		99B0A69C1FA85ED500C79A6D /* SADModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SADModel.m; sourceTree = "<group>"; };
 		99C0D8301FA03EC900D77CB1 /* FYLocalNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYLocalNotification.h; sourceTree = "<group>"; };
 		99C0D8311FA03EC900D77CB1 /* FYLocalNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYLocalNotification.m; sourceTree = "<group>"; };
+		99D2AE911FA9CA3F0008945A /* FYDateResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYDateResult.h; sourceTree = "<group>"; };
+		99D2AE921FA9CA3F0008945A /* FYDateResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYDateResult.m; sourceTree = "<group>"; };
+		99D2AE941FA9D4180008945A /* FYColorManagement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYColorManagement.h; sourceTree = "<group>"; };
+		99D2AE951FA9D4180008945A /* FYColorManagement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYColorManagement.m; sourceTree = "<group>"; };
 		99E5ADFA1F58FD640007B897 /* MainCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		99E5ADFB1F58FD640007B897 /* MainCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		99EC37211F59746C00070453 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
@@ -260,6 +266,8 @@
 			children = (
 				9933EA6A1F98864000BA7896 /* UIColor+Hex.h */,
 				9933EA6B1F98864000BA7896 /* UIColor+Hex.m */,
+				99D2AE941FA9D4180008945A /* FYColorManagement.h */,
+				99D2AE951FA9D4180008945A /* FYColorManagement.m */,
 			);
 			path = "UIColor+Hex";
 			sourceTree = "<group>";
@@ -286,6 +294,8 @@
 			children = (
 				99B0A69B1FA85ED500C79A6D /* SADModel.h */,
 				99B0A69C1FA85ED500C79A6D /* SADModel.m */,
+				99D2AE911FA9CA3F0008945A /* FYDateResult.h */,
+				99D2AE921FA9CA3F0008945A /* FYDateResult.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -665,6 +675,7 @@
 				99F74A081F4FCE1000159AB6 /* MainViewController.m in Sources */,
 				9933EA741F98864000BA7896 /* FYProgessHUD.m in Sources */,
 				991157BB1F9F381B00EC824F /* BaseNavigationController.m in Sources */,
+				99D2AE961FA9D4180008945A /* FYColorManagement.m in Sources */,
 				999004791F5ED555008F4522 /* WKModel.m in Sources */,
 				990BA7D71F948F1900CDAD17 /* FYDatePickerManage.m in Sources */,
 				996002411F5BE21200DBFEFB /* FixButton.m in Sources */,
@@ -682,6 +693,7 @@
 				99B0A4951FA84AE800C79A6D /* SettingDataBase.m in Sources */,
 				991157B81F9F37C500EC824F /* BaseViewController.m in Sources */,
 				99E5ADFC1F58FD640007B897 /* MainCollectionViewFlowLayout.m in Sources */,
+				99D2AE931FA9CA3F0008945A /* FYDateResult.m in Sources */,
 				998789481FA06F66006F79C1 /* SettingViewController.m in Sources */,
 				99C0D8321FA03EC900D77CB1 /* FYLocalNotification.m in Sources */,
 				999994E31FA2D6A4006BC99A /* NSStringConversion.m in Sources */,
