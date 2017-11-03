@@ -8,7 +8,7 @@
 
 #import "FixButton.h"
 #import "FYHeader.h"
-#define BUTTON_WIDTH @50
+#define BUTTON_WIDTH @60
 @implementation FixButton{
     NSString *_imageName;
     FixButtonPosition _position;

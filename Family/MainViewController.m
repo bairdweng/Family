@@ -66,11 +66,6 @@
     UIView *FooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
     [tableView setTableFooterView:FooterView];
     _tableView = tableView;
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [[FYColorManagement sharedManager]setThemeColorStr:@"ffab19"];
-        [FYColorManagement sharedManager].themColor = [UIColor yellowColor];
-    });
     // Do any additional setup after loading the view, typically from a nib.
 }
 -(void)setTableViewHeader{
@@ -96,6 +91,7 @@
         [_dataSource addObject:m_model];
     }
     [[FYNoticeManager sharedManager] activation];
+    [FYDateResult Synchronize];
 }
 
 -(MainModel *)getSADModel{

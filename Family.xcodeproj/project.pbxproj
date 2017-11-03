@@ -42,6 +42,11 @@
 		99B0A4951FA84AE800C79A6D /* SettingDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0A4941FA84AE800C79A6D /* SettingDataBase.m */; };
 		99B0A69D1FA85ED500C79A6D /* SADModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0A69C1FA85ED500C79A6D /* SADModel.m */; };
 		99C0D8321FA03EC900D77CB1 /* FYLocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C0D8311FA03EC900D77CB1 /* FYLocalNotification.m */; };
+		99C588381FAAD28F001040D7 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99C588371FAAD28F001040D7 /* NotificationCenter.framework */; };
+		99C5883C1FAAD28F001040D7 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C5883B1FAAD28F001040D7 /* TodayViewController.m */; };
+		99C5883F1FAAD28F001040D7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C5883D1FAAD28F001040D7 /* MainInterface.storyboard */; };
+		99C588431FAAD28F001040D7 /* FYToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 99C588361FAAD28F001040D7 /* FYToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		99D2AE221FAC6C8C003CAD59 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 9933EA6B1F98864000BA7896 /* UIColor+Hex.m */; };
 		99D2AE931FA9CA3F0008945A /* FYDateResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D2AE921FA9CA3F0008945A /* FYDateResult.m */; };
 		99D2AE961FA9D4180008945A /* FYColorManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D2AE951FA9D4180008945A /* FYColorManagement.m */; };
 		99E5ADFC1F58FD640007B897 /* MainCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E5ADFB1F58FD640007B897 /* MainCollectionViewFlowLayout.m */; };
@@ -58,6 +63,30 @@
 		BED14522A058B3A0E8366E4F /* libPods-Family.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 110B578A05AEA6E1CF622328 /* libPods-Family.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		99C588411FAAD28F001040D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99F749F51F4FCE1000159AB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99C588351FAAD28F001040D7;
+			remoteInfo = FYToday;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		99C588471FAAD28F001040D7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				99C588431FAAD28F001040D7 /* FYToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		110B578A05AEA6E1CF622328 /* libPods-Family.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Family.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7117ADCC8E49B6DF1D05D470 /* Pods-Family.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Family.release.xcconfig"; path = "Pods/Target Support Files/Pods-Family/Pods-Family.release.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +101,10 @@
 		991157BA1F9F381B00EC824F /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		991157C41F9F47A800EC824F /* WKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKViewController.h; sourceTree = "<group>"; };
 		991157C51F9F47A800EC824F /* WKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKViewController.m; sourceTree = "<group>"; };
+		99124C3A1FAB30F60086D0C6 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		99124C3C1FAB31090086D0C6 /* libPods-FYToday.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-FYToday.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99124C431FAB35770086D0C6 /* FYToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FYToday.entitlements; sourceTree = "<group>"; };
+		99124C441FAB38430086D0C6 /* Family.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Family.entitlements; sourceTree = "<group>"; };
 		992DF6251F59537800C3F218 /* MainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainItem.h; sourceTree = "<group>"; };
 		992DF6261F59537800C3F218 /* MainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainItem.m; sourceTree = "<group>"; };
 		9933EA521F98864000BA7896 /* JKDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKDBHelper.h; sourceTree = "<group>"; };
@@ -132,6 +165,12 @@
 		99B0A69C1FA85ED500C79A6D /* SADModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SADModel.m; sourceTree = "<group>"; };
 		99C0D8301FA03EC900D77CB1 /* FYLocalNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYLocalNotification.h; sourceTree = "<group>"; };
 		99C0D8311FA03EC900D77CB1 /* FYLocalNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYLocalNotification.m; sourceTree = "<group>"; };
+		99C588361FAAD28F001040D7 /* FYToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FYToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		99C588371FAAD28F001040D7 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		99C5883A1FAAD28F001040D7 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		99C5883B1FAAD28F001040D7 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		99C5883E1FAAD28F001040D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		99C588401FAAD28F001040D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99D2AE911FA9CA3F0008945A /* FYDateResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYDateResult.h; sourceTree = "<group>"; };
 		99D2AE921FA9CA3F0008945A /* FYDateResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYDateResult.m; sourceTree = "<group>"; };
 		99D2AE941FA9D4180008945A /* FYColorManagement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYColorManagement.h; sourceTree = "<group>"; };
@@ -159,6 +198,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		99C588331FAAD28F001040D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99C588381FAAD28F001040D7 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99F749FA1F4FCE1000159AB6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,6 +248,7 @@
 		9933EA501F98864000BA7896 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				99D2AE231FAC6EF5003CAD59 /* UpdateGroup */,
 				9933EA621F98864000BA7896 /* FYHeader.h */,
 				999994E01FA2D63C006BC99A /* NSStringConversion */,
 				99878B481FA090B2006F79C1 /* FYJson */,
@@ -423,6 +471,25 @@
 			path = FYLocalNotification;
 			sourceTree = "<group>";
 		};
+		99C588391FAAD28F001040D7 /* FYToday */ = {
+			isa = PBXGroup;
+			children = (
+				99124C431FAB35770086D0C6 /* FYToday.entitlements */,
+				99C5883A1FAAD28F001040D7 /* TodayViewController.h */,
+				99C5883B1FAAD28F001040D7 /* TodayViewController.m */,
+				99C5883D1FAAD28F001040D7 /* MainInterface.storyboard */,
+				99C588401FAAD28F001040D7 /* Info.plist */,
+			);
+			path = FYToday;
+			sourceTree = "<group>";
+		};
+		99D2AE231FAC6EF5003CAD59 /* UpdateGroup */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UpdateGroup;
+			sourceTree = "<group>";
+		};
 		99F749F41F4FCE1000159AB6 = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +500,7 @@
 				991FB61A1F5967DA00E07B3C /* images */,
 				99FAFED51F57DE9D0050C08A /* Main */,
 				99F749FF1F4FCE1000159AB6 /* Family */,
+				99C588391FAAD28F001040D7 /* FYToday */,
 				99F749FE1F4FCE1000159AB6 /* Products */,
 				184321271702D91C2563F949 /* Pods */,
 				A10FC9AC9EA52553A010743A /* Frameworks */,
@@ -443,6 +511,7 @@
 			isa = PBXGroup;
 			children = (
 				99F749FD1F4FCE1000159AB6 /* Family.app */,
+				99C588361FAAD28F001040D7 /* FYToday.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -450,6 +519,7 @@
 		99F749FF1F4FCE1000159AB6 /* Family */ = {
 			isa = PBXGroup;
 			children = (
+				99124C441FAB38430086D0C6 /* Family.entitlements */,
 				99F74A031F4FCE1000159AB6 /* AppDelegate.h */,
 				99F74A041F4FCE1000159AB6 /* AppDelegate.m */,
 				99F74A091F4FCE1000159AB6 /* Main.storyboard */,
@@ -532,7 +602,10 @@
 		A10FC9AC9EA52553A010743A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				99124C3C1FAB31090086D0C6 /* libPods-FYToday.a */,
+				99124C3A1FAB30F60086D0C6 /* libMasonry.a */,
 				110B578A05AEA6E1CF622328 /* libPods-Family.a */,
+				99C588371FAAD28F001040D7 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -540,6 +613,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		99C588351FAAD28F001040D7 /* FYToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99C588461FAAD28F001040D7 /* Build configuration list for PBXNativeTarget "FYToday" */;
+			buildPhases = (
+				99C588321FAAD28F001040D7 /* Sources */,
+				99C588331FAAD28F001040D7 /* Frameworks */,
+				99C588341FAAD28F001040D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FYToday;
+			productName = FYToday;
+			productReference = 99C588361FAAD28F001040D7 /* FYToday.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		99F749FC1F4FCE1000159AB6 /* Family */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99F74A141F4FCE1000159AB6 /* Build configuration list for PBXNativeTarget "Family" */;
@@ -550,10 +640,12 @@
 				99F749FB1F4FCE1000159AB6 /* Resources */,
 				C90C6FB18A9333DF0FAD86C8 /* [CP] Embed Pods Frameworks */,
 				8BB996799372FC967B9DB7D9 /* [CP] Copy Pods Resources */,
+				99C588471FAAD28F001040D7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				99C588421FAAD28F001040D7 /* PBXTargetDependency */,
 			);
 			name = Family;
 			productName = Family;
@@ -569,11 +661,24 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Baird-weng";
 				TargetAttributes = {
+					99C588351FAAD28F001040D7 = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = 47425P9QYK;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					99F749FC1F4FCE1000159AB6 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 47425P9QYK;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 0;
 							};
@@ -595,11 +700,20 @@
 			projectRoot = "";
 			targets = (
 				99F749FC1F4FCE1000159AB6 /* Family */,
+				99C588351FAAD28F001040D7 /* FYToday */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		99C588341FAAD28F001040D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99C5883F1FAAD28F001040D7 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99F749FB1F4FCE1000159AB6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -663,6 +777,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		99C588321FAAD28F001040D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99D2AE221FAC6C8C003CAD59 /* UIColor+Hex.m in Sources */,
+				99C5883C1FAAD28F001040D7 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99F749F91F4FCE1000159AB6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -715,7 +838,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		99C588421FAAD28F001040D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99C588351FAAD28F001040D7 /* FYToday */;
+			targetProxy = 99C588411FAAD28F001040D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		99C5883D1FAAD28F001040D7 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99C5883E1FAAD28F001040D7 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		99F74A091F4FCE1000159AB6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -727,6 +866,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		99C588441FAAD28F001040D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 793DC689A167D963D4C5ECD7 /* Pods-Family.debug.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = FYToday/FYToday.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 47425P9QYK;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = FYToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bwfamily.app.today;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		99C588451FAAD28F001040D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7117ADCC8E49B6DF1D05D470 /* Pods-Family.release.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = FYToday/FYToday.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 47425P9QYK;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = FYToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bwfamily.app.today;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		99F74A121F4FCE1000159AB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -835,16 +1020,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Family/Family.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47425P9QYK;
 				INFOPLIST_FILE = Family/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bwinfo.com.Family;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bwfamily.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b83db8ca-01e6-489e-887d-9b31e366760a";
-				PROVISIONING_PROFILE_SPECIFIER = comAppAllTest;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -855,16 +1043,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Family/Family.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47425P9QYK;
 				INFOPLIST_FILE = Family/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bwinfo.com.Family;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bwfamily.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b83db8ca-01e6-489e-887d-9b31e366760a";
-				PROVISIONING_PROFILE_SPECIFIER = comAppAllTest;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -872,6 +1063,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		99C588461FAAD28F001040D7 /* Build configuration list for PBXNativeTarget "FYToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99C588441FAAD28F001040D7 /* Debug */,
+				99C588451FAAD28F001040D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		99F749F81F4FCE1000159AB6 /* Build configuration list for PBXProject "Family" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -4,14 +4,24 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>FYToday.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 		<key>Family.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>11</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>99C588351FAAD28F001040D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>99F749FC1F4FCE1000159AB6</key>
 		<dict>
 			<key>primary</key>

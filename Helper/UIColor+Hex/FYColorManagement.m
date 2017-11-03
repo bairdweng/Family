@@ -17,6 +17,9 @@
     });
     return manager;
 }
+-(UIColor *)themColor{
+    return [UIColor colorWithNavigation];
+}
 - (void)setThemeColorStr:(NSString*)colorStr{
     [[NSUserDefaults standardUserDefaults]setObject:colorStr forKey:FYRHENCOLORSTRING];
     [FYColorManagement sharedManager].themColor = [UIColor colorWithHexString:colorStr];

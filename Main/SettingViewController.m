@@ -74,8 +74,8 @@
                                                             self.dataBaseModel.restState = 1;
                                                             self.dataBaseModel.lastTime = [[NSDate date] formattedDateWithFormat:@"yyyy-MM-dd" timeZone:[NSTimeZone systemTimeZone]];
                                                             [self.dataBaseModel saveOrUpdate];
-
                                                             [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                                                            [FYDateResult Synchronize];
                                                         }];
         UIAlertAction* action2 = [UIAlertAction actionWithTitle:@"双休"
                                                          style:UIAlertActionStyleDefault
@@ -87,6 +87,7 @@
                                                            self.dataBaseModel.restState = 2;
                                                            [self.dataBaseModel saveOrUpdate];
                                                            [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                                                           [FYDateResult Synchronize];
                                                        }];
         UIAlertAction* action3 = [UIAlertAction actionWithTitle:@"取消"
                                                           style:UIAlertActionStyleCancel

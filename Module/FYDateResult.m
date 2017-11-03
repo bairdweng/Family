@@ -71,4 +71,9 @@
         return wday-2;
     }
 }
++ (void)Synchronize{
+    NSUserDefaults* userDefault = [[NSUserDefaults alloc] initWithSuiteName:@"group.family.app"];
+    [userDefault setObject:[FYDateResult getResultStringByDate:[NSDate date]] forKey:@"stateStr"];
+    [userDefault synchronize];
+}
 @end

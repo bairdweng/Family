@@ -10,6 +10,9 @@
 #import "IQKeyboardManager/IQKeyboardManager.h"
 #import "FYHeader.h"
 #import "FYNoticeManager.h"
+#import "SettingViewController.h"
+#import "SingleAndDoubleViewController.h"
+
 @interface AppDelegate ()
 @end
 
@@ -27,16 +30,6 @@
     }
     [[FYNoticeManager sharedManager] cancelAllLocalNotifications];
     [[FYNoticeManager sharedManager]activation];
-    
-    
-//    NSString* themColorstr = [[NSUserDefaults standardUserDefaults] objectForKey:FYRHENCOLORSTRING];
-//    if(themColorstr&&themColorstr.length>0){
-//        [FYColorManagement sharedManager].themColor = [UIColor colorWithHexString:themColorstr];
-//    } else {
-//         [FYColorManagement sharedManager].themColor = [UIColor colorWithNavigation];
-//    }
-    [FYColorManagement sharedManager].themColor = [UIColor redColor];
-
     NSLog(@"%@",SandBoxpath(@""));
     return YES;
 }
@@ -49,8 +42,8 @@
     NSLog(@"---%@---",notification.alertBody);
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-
+- (void)applicationDidEnterBackground:(UIApplication*)application
+{
 }
 
 
@@ -67,6 +60,29 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
+- (BOOL)application:(UIApplication*)app openURL:(NSURL*)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id>*)options
+{
+    NSString *relativeString = url.relativeString;
+    if ([relativeString isEqualToString:@"FamilyPro://setRest"]) {
+        SettingViewController *setting = [[SettingViewController alloc]init];
+        setting.title = @"设置";
+        UINavigationController* viewController = (UINavigationController*)self.window.rootViewController;
+        [viewController popToRootViewControllerAnimated:NO];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [viewController pushViewController:setting animated:YES];
+        });
+        return YES;
+    }
+    else if ([relativeString isEqualToString:@"FamilyPro://calendarView"]){
+        SingleAndDoubleViewController *singleViewController = [[SingleAndDoubleViewController alloc]init];
+        UINavigationController* viewController = (UINavigationController*)self.window.rootViewController;
+        [viewController popToRootViewControllerAnimated:NO];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [viewController pushViewController:singleViewController animated:YES];
+        });
+        return YES;
+    }
+    return NO;
+}
 
 @end

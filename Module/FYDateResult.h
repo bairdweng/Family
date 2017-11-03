@@ -11,4 +11,5 @@
 @interface FYDateResult : NSObject
 + (NSInteger)getResultByDate:(NSDate*)date;
 + (NSString*)getResultStringByDate:(NSDate*)date;
++ (void)Synchronize;
 @end
